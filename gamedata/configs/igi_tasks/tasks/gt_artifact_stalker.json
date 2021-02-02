@@ -1,0 +1,16 @@
+{
+	"preconditions": {
+	},
+	"disabled":false,
+	"setup": [
+		{
+		"target":"get",
+		"look_in": "npc_inv",
+		"where": "everywhere",
+		"only_enemies":true,
+		"item_type":"artifact_scalable",
+		"possible_endings":"artifact_boxes",
+		"entity_type":"item"
+		},
+	],
+}

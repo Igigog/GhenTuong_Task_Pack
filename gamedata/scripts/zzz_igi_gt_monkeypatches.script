@@ -1,0 +1,13 @@
+itms_manager.gt_use_package = function (obj)
+	local sec = obj:section()
+	local possible_content_key = ini_sys:r_string_ex(sec,"possible_content")
+	if not possible_content_key then return end
+
+	local possible_content = igi_db.SectionView.new('finder\\t_gt.ltx', igi_helper.scale_value(possible_content_key))
+	local content = {}
+	for i=1, ini_sys:r_float_ex(sec, "amount_content") do
+		local v = possible_content:random()
+		table.insert(content, v)
+	end
+	utils_item.delay_event(content, {obj:id()}, "medkit_ai1", true, 5)
+end
