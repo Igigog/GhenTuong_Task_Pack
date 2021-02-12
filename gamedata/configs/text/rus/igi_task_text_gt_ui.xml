@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
 	<!-- UI -->
-	<string id="igi_task_text_targets">
+	<string id="igi_task_text_gt_targets">
 		<text>Цель</text>
 	</string>
-	<string id="igi_task_text_factions">
+	<string id="igi_task_text_gt_factions">
 		<text>Группировка</text>
 	</string>
-	<string id="igi_task_text_locations">
+	<string id="igi_task_text_gt_locations">
 		<text>Место</text>
 	</string>
 	
 	<!-- Mutant -->
-	<string id="igi_task_text_zombie">
+	<string id="igi_task_text_gt_zombie">
 		<text>Зомби</text>
 	</string>
-	<string id="igi_task_text_flesh">
+	<string id="igi_task_text_gt_flesh">
 		<text>Плоть</text>
 	</string>
-	<string id="igi_task_text_boar">
+	<string id="igi_task_text_gt_boar">
 		<text>Кабан</text>
 	</string>
-	<string id="igi_task_text_snork">
+	<string id="igi_task_text_gt_snork">
 		<text>Снорк</text>
 	</string>
-	<string id="igi_task_text_psy_dog">
+	<string id="igi_task_text_gt_psy_dog">
 		<text>Пси-собака</text>
 	</string>
-	<string id="igi_task_text_lurker">
+	<string id="igi_task_text_gt_lurker">
 		<text>Луркер</text>
 	</string>
-	<string id="igi_task_text_chimera">
+	<string id="igi_task_text_gt_chimera">
 		<text>Химера</text>
 	</string>
-	<string id="igi_task_text_bloodsucker">
+	<string id="igi_task_text_gt_bloodsucker">
 		<text>Кровосос</text>
 	</string>
-	<string id="igi_task_text_burer">
+	<string id="igi_task_text_gt_burer">
 		<text>Бюрер</text>
 	</string>
-	<string id="igi_task_text_controller">
+	<string id="igi_task_text_gt_controller">
 		<text>Контроллёр</text>
 	</string>
-	<string id="igi_task_text_poltergeist">
+	<string id="igi_task_text_gt_poltergeist">
 		<text>Полтергейст</text>
 	</string>
-	<string id="igi_task_text_gigant">
+	<string id="igi_task_text_gt_gigant">
 		<text>Псевдогигант</text>
 	</string>
 
 	<!-- Package -->
-	<string id="igi_task_text_pda_package">
+	<string id="igi_task_text_gt_pda_package">
 		<text>Кажется, именно эту посылку нужно доставить.</text>
 	</string>
-	<string id="igi_task_text_artifact">
+	<string id="igi_task_text_gt_artifact">
 		<text>Артефакт</text>
 	</string>
-	<string id="igi_task_text_weapon">
+	<string id="igi_task_text_gt_weapon">
 		<text>Оружие</text>
 	</string>
-	<string id="igi_task_text_medicine">
+	<string id="igi_task_text_gt_medicine">
 		<text>Медицина</text>
 	</string>
-	<string id="igi_task_text_ammunition">
+	<string id="igi_task_text_gt_ammunition">
 		<text>Патроны</text>
 	</string>
 	
 	<!-- Heavy -->
-	<string id="igi_task_text_heavy">
+	<string id="igi_task_text_gt_heavy">
 		<text>Опытный сталкер</text>
 	</string>
 </string_table>

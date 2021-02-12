@@ -5,7 +5,7 @@
 	"setup": [
 		{
 		"entity_type":"squad",
-		"type":"heavy_scalable",
+		"type":"gt_heavy_scalable",
 		"faction_type":"enemy",
 		"to_create":true,
 		"where":"nearby",

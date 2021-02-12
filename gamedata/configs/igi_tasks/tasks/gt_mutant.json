@@ -5,7 +5,7 @@
 	"setup": [
 		{
 		"entity_type":"squad",
-		"type":"mutant_scalable",
+		"type":"gt_mutant_scalable",
 		"to_create": true,
 		"where":"nearby",
 		"target":"assault",

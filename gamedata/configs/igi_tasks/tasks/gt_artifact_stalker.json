@@ -1,16 +1,21 @@
 {
 	"preconditions": {
+		"goodwill": 1000,
 	},
 	"disabled":false,
 	"setup": [
 		{
 		"target":"get",
 		"look_in": "npc_inv",
-		"where": "everywhere",
+		"where": "anywhere",
 		"only_enemies":true,
-		"item_type":"artifact_scalable",
+		"item_type":"gt_artifact_scalable",
 		"possible_endings":"artifact_boxes",
 		"entity_type":"item"
 		},
 	],
+	"reward": {
+		"goodwill": 10,
+		"money": 0,
+	},
 }

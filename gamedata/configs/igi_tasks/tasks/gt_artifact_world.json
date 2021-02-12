@@ -1,15 +1,20 @@
 {
 	"preconditions": {
+		"goodwill": 1500,
 	},
 	"disabled":false,
 	"setup": [
 		{
 		"target":"get",
-		"item_type":"artifact_scalable",
+		"item_type":"gt_artifact_scalable",
 		"look_in":"world",
-		"where":"everywhere",
+		"where":"anywhere",
 		"entity_type":"item",
 		"amount":1,
 		}
 	],
+	"reward": {
+		"goodwill": -300,
+		"money": 0,
+	},
 }

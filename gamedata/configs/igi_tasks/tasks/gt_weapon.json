@@ -1,9 +1,9 @@
 {
 	"preconditions": {
+		"goodwill": 300,
 	},
 	"disabled":false,
 	"setup": [
-
 	{
 	"only_enemies":true,
 	"target":"get",
@@ -12,11 +12,13 @@
 			{"repair":true}
 		},
 	"look_in":"npc_inv",
-	"item_type":"weapon_scalable",
+	"item_type":"gt_weapon_scalable",
 	"entity_type":"item",
 	"where":"nearby",
 	"amount":1,
 	},
-
 	],
+	"reward": {
+		"money": 0,
+	},
 }

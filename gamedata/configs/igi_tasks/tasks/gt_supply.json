@@ -1,5 +1,6 @@
 {
 	"preconditions": {
+		"player_tier": "midgame"
 	},
 	"disabled":false,
 	"setup": [
@@ -13,7 +14,7 @@
 		"amount":2,
 		"faction_type":"enemy",
 		"entity_type":"squad",
-		"type":"guard",
+		"type":"gt_guard",
 		"to_create":true,
 		"where":"$smart_1_1$",
 		},
@@ -21,7 +22,7 @@
 		{
 		"entity_type":"item",
 		"amount":2,
-		"section":["igi_package_medicine", "igi_package_ammunition"],
+		"section":["gt_package_medicine", "gt_package_ammunition"],
 		"target":"return",
 		"to_create":true,
 		"where":"$smart_1_1$",

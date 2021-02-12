@@ -40,7 +40,7 @@ locations = {
         "esc_2_12_stalker_fanat": "FANATIC",
     },
     "garbage": {
-        "hunter_gar_trader_task": "BUTCHER",
+        "hunter_gar_trader": "BUTCHER",
         "baraholka_trader_night": "TRADER",
     },
     "jupiter": {
