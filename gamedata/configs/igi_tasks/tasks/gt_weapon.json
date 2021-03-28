@@ -12,7 +12,7 @@
 			{"repair":true}
 		},
 	"look_in":"npc_inv",
-	"item_type":"gt_weapon_scalable",
+	"item_list":"gt_weapon_&ScaleToPlayer(3)&",
 	"entity_type":"item",
 	"where":"nearby",
 	"amount":1,

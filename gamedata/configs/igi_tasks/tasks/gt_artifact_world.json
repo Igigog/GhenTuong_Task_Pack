@@ -6,12 +6,12 @@
 	"setup": [
 		{
 		"target":"get",
-		"item_type":"gt_artifact_scalable",
+		"item_list":"gt_artifact_&ScaleToPlayer(3)&",
 		"look_in":"world",
 		"where":"anywhere",
 		"entity_type":"item",
 		"amount":1,
-		}
+		},
 	],
 	"reward": {
 		"goodwill": -300,

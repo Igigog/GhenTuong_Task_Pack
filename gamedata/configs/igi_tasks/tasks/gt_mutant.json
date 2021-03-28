@@ -5,7 +5,7 @@
 	"setup": [
 		{
 		"entity_type":"squad",
-		"type":"gt_mutant_scalable",
+		"section":"&TableValueRandom(gt_mutant_&ScaleToPlayer(1,3)&)&",
 		"to_create": true,
 		"where":"nearby",
 		"target":"assault",

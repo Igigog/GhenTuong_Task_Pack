@@ -12,9 +12,9 @@
 		
 		{
 		"amount":2,
-		"faction_type":"enemy",
+		"faction":"&Faction(enemy of taskgiver and enemy of actor)&",
 		"entity_type":"squad",
-		"type":"gt_guard",
+		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
 		"to_create":true,
 		"where":"$smart_1_1$",
 		},
@@ -22,7 +22,7 @@
 		{
 		"entity_type":"item",
 		"amount":2,
-		"section":["gt_package_medicine", "gt_package_ammunition"],
+		"section":"&ChooseOne(gt_package_medicine,gt_package_ammunition)&",
 		"target":"return",
 		"to_create":true,
 		"where":"$smart_1_1$",
