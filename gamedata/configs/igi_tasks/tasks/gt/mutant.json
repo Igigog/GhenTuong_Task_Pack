@@ -8,7 +8,7 @@
 		"section":"&TableValueRandom(gt_mutant_&ScaleToPlayer(1,3)&)&",
 		"to_create": true,
 		"where":"nearby",
-		"target":"assault",
+		"target":"assault"
 		}
-	],
+	]
 }

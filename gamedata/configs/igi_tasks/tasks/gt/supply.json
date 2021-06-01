@@ -7,7 +7,7 @@
 		{
 		"entity_type":"smart",
 		"where":"nearby",
-		"target":"assault",
+		"target":"assault"
 		},
 		
 		{
@@ -16,7 +16,7 @@
 		"entity_type":"squad",
 		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
 		"to_create":true,
-		"where":"$smart_1_1$",
+		"where":"$smart_1_1$"
 		},
 		
 		{
@@ -25,7 +25,7 @@
 		"section":"&ChooseOne(gt_package_medicine,gt_package_ammunition)&",
 		"target":"return",
 		"to_create":true,
-		"where":"$smart_1_1$",
-		},
-	],
+		"where":"$smart_1_1$"
+		}
+	]
 }

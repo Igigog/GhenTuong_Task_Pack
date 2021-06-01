@@ -1,6 +1,6 @@
 {
 	"preconditions": {
-		"goodwill": 300,
+		"goodwill": 300
 	},
 	"disabled":false,
 	"setup": [
@@ -12,13 +12,13 @@
 			{"repair":true}
 		},
 	"look_in":"npc_inv",
-	"item_list":"gt_weapon_&ScaleToPlayer(3)&",
+	"item_list":"f_gt_weapon_&ScaleToPlayer(3)&",
 	"entity_type":"item",
 	"where":"nearby",
-	"amount":1,
-	},
+	"amount":1
+	}
 	],
 	"reward": {
-		"money": 0,
-	},
+		"money": 0
+	}
 }

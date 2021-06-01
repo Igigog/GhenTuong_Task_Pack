@@ -1,13 +1,13 @@
 {
 	"preconditions": {
-		"player_tier": "endgame",
+		"player_tier": "endgame"
 	},
 	"disabled":false,
 	"setup": [
 		{
 		"where":"nearby",
 		"entity_type":"smart",
-		"target":"assault",
+		"target":"assault"
 		},
 		
 		{
@@ -15,7 +15,7 @@
 		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
 		"entity_type":"squad",
 		"to_create":true,
-		"where":"$smart_1$",
+		"where":"$smart_1$"
 		},
 		
 		{
@@ -27,7 +27,7 @@
 		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
 		"entity_type":"squad",
 		"to_create":true,
-		"where":"$smart_1$",
+		"where":"$smart_1$"
 		},
 		
 		{
@@ -37,7 +37,7 @@
 		"target":"return",
 		"to_create":true,
 		"where":"$smart_1$",
-		"to_description":true,
-		},
-	],
+		"to_description":true
+		}
+	]
 }
