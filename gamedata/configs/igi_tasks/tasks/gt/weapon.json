@@ -5,17 +5,15 @@
 	"disabled":false,
 	"setup": [
 	{
-	"only_enemies":true,
-	"target":"get",
-	"online_activities":
-		{"if_low_condition":
-			{"repair":true}
-		},
-	"look_in":"npc_inv",
-	"item_list":"f_gt_weapon_&ScaleToPlayer(3)&",
-	"entity_type":"item",
-	"where":"nearby",
-	"amount":1
+		"only_enemies":true,
+		"target":"get",
+		"online_activities":
+			{"if_low_condition":
+				{"repair":true}
+			},
+		"find_in":["npc_inv","nearby"],
+		"item_list":"f_gt_weapon_&ScaleToPlayer(3)&",
+		"entity_type":"item"
 	}
 	],
 	"reward": {

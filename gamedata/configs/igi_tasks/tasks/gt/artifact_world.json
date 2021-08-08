@@ -7,8 +7,7 @@
 		{
 		"target":"get",
 		"item_list":"f_gt_artifact_&ScaleToPlayer(3)&",
-		"look_in":"world",
-		"where":"anywhere",
+		"find_in":["world","anywhere"],
 		"entity_type":"item",
 		"amount":1
 		}

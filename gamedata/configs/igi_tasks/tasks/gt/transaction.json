@@ -6,16 +6,14 @@
 	"setup": [
 		{
 		"where":"nearby",
-		"entity_type":"smart",
+		"entity_type":"location",
 		"target":"assault"
 		},
 		
 		{
 		"faction":"&Faction(enemy of taskgiver and enemy of actor)&",
 		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
-		"entity_type":"squad",
-		"to_create":true,
-		"where":"$smart_1$"
+		"entity_type":"squad"
 		},
 		
 		{
@@ -25,9 +23,7 @@
 				{"change_faction":"$squad_1.faction$"}
 			},
 		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
-		"entity_type":"squad",
-		"to_create":true,
-		"where":"$smart_1$"
+		"entity_type":"squad"
 		},
 		
 		{
@@ -35,8 +31,6 @@
 		"amount":2,
 		"section":"&ChooseOne(gt_package_weapon,gt_package_artifact)&",
 		"target":"return",
-		"to_create":true,
-		"where":"$smart_1$",
 		"to_description":true
 		}
 	]

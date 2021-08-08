@@ -5,7 +5,7 @@
 	"disabled":false,
 	"setup": [
 		{
-		"entity_type":"smart",
+		"entity_type":"location",
 		"where":"nearby",
 		"target":"assault"
 		},
@@ -15,8 +15,7 @@
 		"faction":"&Faction(enemy of taskgiver and enemy of actor)&",
 		"entity_type":"squad",
 		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
-		"to_create":true,
-		"where":"$smart_1_1$"
+		"to_create":true
 		},
 		
 		{
@@ -24,8 +23,7 @@
 		"amount":2,
 		"section":"&ChooseOne(gt_package_medicine,gt_package_ammunition)&",
 		"target":"return",
-		"to_create":true,
-		"where":"$smart_1_1$"
+		"to_create":true
 		}
 	]
 }

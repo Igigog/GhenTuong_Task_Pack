@@ -6,8 +6,7 @@
 	"setup": [
 		{
 		"target":"get",
-		"look_in": "npc_inv",
-		"where": "anywhere",
+		"find_in": ["npc_inv","anywhere"],
 		"only_enemies":true,
 		"item_list":"f_gt_artifact_&ScaleToPlayer(1,3)&",
 		"possible_endings":"artifact_boxes",
