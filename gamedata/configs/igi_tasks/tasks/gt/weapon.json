@@ -13,7 +13,8 @@
 			},
 		"find_in":["npc_inv","nearby"],
 		"item_list":"f_gt_weapon_&ScaleToPlayer(3)&",
-		"entity_type":"item"
+		"entity_type":"item",
+		"to_create": false
 	}
 	],
 	"reward": {
