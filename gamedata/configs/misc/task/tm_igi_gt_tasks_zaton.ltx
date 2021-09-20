@@ -2,83 +2,13 @@
 ; 
 ;    Anomaly 1.5.1 
 ;    Igigog 
-;    Last change: 03/28/2021, 12:33:15 UTC 
+;    Last change: 09/16/2021, 12:52:16 UTC 
 ;
 ;============================================================
 ;============================================================
-;                {'Loner', 'Zaton', 'Medic'} 
-;                   zat_b22_stalker_medic
-;============================================================
-
-[zat_b22_stalker_medic_task_gt_artifact_stalker]
-icon                  = ui_inGame2_Kontrakt_s_uchenimi
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_b22_stalker_medic_task_gt_artifact_stalker)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_b22_stalker_medic_task_gt_artifact_stalker_job_descr
-task_complete_descr   = igi_task_text_zat_b22_stalker_medic_task_gt_artifact_stalker_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_b22_stalker_medic_task_gt_artifact_stalker)%
-
-on_complete           = %=igi_task_generic_finish(zat_b22_stalker_medic_task_gt_artifact_stalker:true)%
-on_fail               = %=igi_task_generic_finish(zat_b22_stalker_medic_task_gt_artifact_stalker:false))%
-condlist_0            = {!task_giver_alive(zat_b22_stalker_medic_task_gt_artifact_stalker)} fail
-
-
-[zat_b22_stalker_medic_task_gt_artifact_world]
-icon                  = ui_inGame2_Kontrakt_s_uchenimi
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_b22_stalker_medic_task_gt_artifact_world)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_b22_stalker_medic_task_gt_artifact_world_job_descr
-task_complete_descr   = igi_task_text_zat_b22_stalker_medic_task_gt_artifact_world_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_b22_stalker_medic_task_gt_artifact_world)%
-
-on_complete           = %=igi_task_generic_finish(zat_b22_stalker_medic_task_gt_artifact_world:true)%
-on_fail               = %=igi_task_generic_finish(zat_b22_stalker_medic_task_gt_artifact_world:false))%
-condlist_0            = {!task_giver_alive(zat_b22_stalker_medic_task_gt_artifact_world)} fail
-
-;============================================================
-;              {'Mechanic', 'Zaton', 'Loner'} 
+;              {'Zaton', 'Loner', 'Mechanic'} 
 ;                       zat_tech_mlr
 ;============================================================
-
-[zat_tech_mlr_task_gt_supply]
-icon                  = ui_inGame2_Osobiy_zakaz
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_tech_mlr_task_gt_supply)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_tech_mlr_task_gt_supply_job_descr
-task_complete_descr   = igi_task_text_zat_tech_mlr_task_gt_supply_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_tech_mlr_task_gt_supply)%
-
-on_complete           = %=igi_task_generic_finish(zat_tech_mlr_task_gt_supply:true)%
-on_fail               = %=igi_task_generic_finish(zat_tech_mlr_task_gt_supply:false))%
-condlist_0            = {!task_giver_alive(zat_tech_mlr_task_gt_supply)} fail
-
 
 [zat_tech_mlr_task_gt_weapon]
 icon                  = ui_inGame2_Neizvestnoe_oruzhie
@@ -92,7 +22,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_zat_tech_mlr_task_gt_weapon_job_descr
 task_complete_descr   = igi_task_text_zat_tech_mlr_task_gt_weapon_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(zat_tech_mlr_task_gt_weapon)%
@@ -114,7 +44,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_zat_tech_mlr_task_gt_transaction_job_descr
 task_complete_descr   = igi_task_text_zat_tech_mlr_task_gt_transaction_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(zat_tech_mlr_task_gt_transaction)%
@@ -122,6 +52,28 @@ on_job_descr          = %=igi_task_generic_setup(zat_tech_mlr_task_gt_transactio
 on_complete           = %=igi_task_generic_finish(zat_tech_mlr_task_gt_transaction:true)%
 on_fail               = %=igi_task_generic_finish(zat_tech_mlr_task_gt_transaction:false))%
 condlist_0            = {!task_giver_alive(zat_tech_mlr_task_gt_transaction)} fail
+
+
+[zat_tech_mlr_task_gt_supply]
+icon                  = ui_inGame2_Osobiy_zakaz
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_tech_mlr_task_gt_supply)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_tech_mlr_task_gt_supply_job_descr
+task_complete_descr   = igi_task_text_zat_tech_mlr_task_gt_supply_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_tech_mlr_task_gt_supply)%
+
+on_complete           = %=igi_task_generic_finish(zat_tech_mlr_task_gt_supply:true)%
+on_fail               = %=igi_task_generic_finish(zat_tech_mlr_task_gt_supply:false))%
+condlist_0            = {!task_giver_alive(zat_tech_mlr_task_gt_supply)} fail
 
 
 [zat_tech_mlr_task_gt_heavy]
@@ -136,7 +88,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_zat_tech_mlr_task_gt_heavy_job_descr
 task_complete_descr   = igi_task_text_zat_tech_mlr_task_gt_heavy_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(zat_tech_mlr_task_gt_heavy)%
@@ -158,7 +110,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_zat_tech_mlr_task_gt_mutant_job_descr
 task_complete_descr   = igi_task_text_zat_tech_mlr_task_gt_mutant_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(zat_tech_mlr_task_gt_mutant)%
@@ -168,145 +120,9 @@ on_fail               = %=igi_task_generic_finish(zat_tech_mlr_task_gt_mutant:fa
 condlist_0            = {!task_giver_alive(zat_tech_mlr_task_gt_mutant)} fail
 
 ;============================================================
-;              {'Mechanic', 'Zaton', 'Loner'} 
-;                  zat_a2_stalker_mechanic
-;============================================================
-
-[zat_a2_stalker_mechanic_task_gt_supply]
-icon                  = ui_inGame2_Osobiy_zakaz
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_supply)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_supply_job_descr
-task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_supply_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_supply)%
-
-on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_supply:true)%
-on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_supply:false))%
-condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_supply)} fail
-
-
-[zat_a2_stalker_mechanic_task_gt_weapon]
-icon                  = ui_inGame2_Neizvestnoe_oruzhie
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_weapon)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_weapon_job_descr
-task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_weapon_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_weapon)%
-
-on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_weapon:true)%
-on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_weapon:false))%
-condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_weapon)} fail
-
-
-[zat_a2_stalker_mechanic_task_gt_transaction]
-icon                  = ui_inGame2_Sdelka
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_transaction)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_transaction_job_descr
-task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_transaction_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_transaction)%
-
-on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_transaction:true)%
-on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_transaction:false))%
-condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_transaction)} fail
-
-
-[zat_a2_stalker_mechanic_task_gt_heavy]
-icon                  = ui_inGame2_PD_master_boevih_sistem
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_heavy)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_heavy_job_descr
-task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_heavy_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_heavy)%
-
-on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_heavy:true)%
-on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_heavy:false))%
-condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_heavy)} fail
-
-
-[zat_a2_stalker_mechanic_task_gt_mutant]
-icon                  = ui_iconsTotal_mutant
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_mutant)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_mutant_job_descr
-task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_mutant_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_mutant)%
-
-on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_mutant:true)%
-on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_mutant:false))%
-condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_mutant)} fail
-
-;============================================================
-;            {'Mercenary', 'Mechanic', 'Zaton'} 
+;            {'Zaton', 'Mercenary', 'Mechanic'} 
 ;                   zat_stancia_mech_merc
 ;============================================================
-
-[zat_stancia_mech_merc_task_gt_supply]
-icon                  = ui_inGame2_Osobiy_zakaz
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(zat_stancia_mech_merc_task_gt_supply)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_zat_stancia_mech_merc_task_gt_supply_job_descr
-task_complete_descr   = igi_task_text_zat_stancia_mech_merc_task_gt_supply_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(zat_stancia_mech_merc_task_gt_supply)%
-
-on_complete           = %=igi_task_generic_finish(zat_stancia_mech_merc_task_gt_supply:true)%
-on_fail               = %=igi_task_generic_finish(zat_stancia_mech_merc_task_gt_supply:false))%
-condlist_0            = {!task_giver_alive(zat_stancia_mech_merc_task_gt_supply)} fail
-
 
 [zat_stancia_mech_merc_task_gt_weapon]
 icon                  = ui_inGame2_Neizvestnoe_oruzhie
@@ -320,7 +136,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_zat_stancia_mech_merc_task_gt_weapon_job_descr
 task_complete_descr   = igi_task_text_zat_stancia_mech_merc_task_gt_weapon_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(zat_stancia_mech_merc_task_gt_weapon)%
@@ -342,7 +158,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_zat_stancia_mech_merc_task_gt_transaction_job_descr
 task_complete_descr   = igi_task_text_zat_stancia_mech_merc_task_gt_transaction_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(zat_stancia_mech_merc_task_gt_transaction)%
@@ -350,6 +166,28 @@ on_job_descr          = %=igi_task_generic_setup(zat_stancia_mech_merc_task_gt_t
 on_complete           = %=igi_task_generic_finish(zat_stancia_mech_merc_task_gt_transaction:true)%
 on_fail               = %=igi_task_generic_finish(zat_stancia_mech_merc_task_gt_transaction:false))%
 condlist_0            = {!task_giver_alive(zat_stancia_mech_merc_task_gt_transaction)} fail
+
+
+[zat_stancia_mech_merc_task_gt_supply]
+icon                  = ui_inGame2_Osobiy_zakaz
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_stancia_mech_merc_task_gt_supply)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_stancia_mech_merc_task_gt_supply_job_descr
+task_complete_descr   = igi_task_text_zat_stancia_mech_merc_task_gt_supply_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_stancia_mech_merc_task_gt_supply)%
+
+on_complete           = %=igi_task_generic_finish(zat_stancia_mech_merc_task_gt_supply:true)%
+on_fail               = %=igi_task_generic_finish(zat_stancia_mech_merc_task_gt_supply:false))%
+condlist_0            = {!task_giver_alive(zat_stancia_mech_merc_task_gt_supply)} fail
 
 
 [zat_stancia_mech_merc_task_gt_heavy]
@@ -364,7 +202,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_zat_stancia_mech_merc_task_gt_heavy_job_descr
 task_complete_descr   = igi_task_text_zat_stancia_mech_merc_task_gt_heavy_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(zat_stancia_mech_merc_task_gt_heavy)%
@@ -386,7 +224,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_zat_stancia_mech_merc_task_gt_mutant_job_descr
 task_complete_descr   = igi_task_text_zat_stancia_mech_merc_task_gt_mutant_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(zat_stancia_mech_merc_task_gt_mutant)%
@@ -394,4 +232,166 @@ on_job_descr          = %=igi_task_generic_setup(zat_stancia_mech_merc_task_gt_m
 on_complete           = %=igi_task_generic_finish(zat_stancia_mech_merc_task_gt_mutant:true)%
 on_fail               = %=igi_task_generic_finish(zat_stancia_mech_merc_task_gt_mutant:false))%
 condlist_0            = {!task_giver_alive(zat_stancia_mech_merc_task_gt_mutant)} fail
+
+;============================================================
+;              {'Zaton', 'Loner', 'Mechanic'} 
+;                  zat_a2_stalker_mechanic
+;============================================================
+
+[zat_a2_stalker_mechanic_task_gt_weapon]
+icon                  = ui_inGame2_Neizvestnoe_oruzhie
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_weapon)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_weapon_job_descr
+task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_weapon_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_weapon)%
+
+on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_weapon:true)%
+on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_weapon:false))%
+condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_weapon)} fail
+
+
+[zat_a2_stalker_mechanic_task_gt_transaction]
+icon                  = ui_inGame2_Sdelka
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_transaction)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_transaction_job_descr
+task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_transaction_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_transaction)%
+
+on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_transaction:true)%
+on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_transaction:false))%
+condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_transaction)} fail
+
+
+[zat_a2_stalker_mechanic_task_gt_supply]
+icon                  = ui_inGame2_Osobiy_zakaz
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_supply)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_supply_job_descr
+task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_supply_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_supply)%
+
+on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_supply:true)%
+on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_supply:false))%
+condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_supply)} fail
+
+
+[zat_a2_stalker_mechanic_task_gt_heavy]
+icon                  = ui_inGame2_PD_master_boevih_sistem
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_heavy)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_heavy_job_descr
+task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_heavy_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_heavy)%
+
+on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_heavy:true)%
+on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_heavy:false))%
+condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_heavy)} fail
+
+
+[zat_a2_stalker_mechanic_task_gt_mutant]
+icon                  = ui_iconsTotal_mutant
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_a2_stalker_mechanic_task_gt_mutant)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_a2_stalker_mechanic_task_gt_mutant_job_descr
+task_complete_descr   = igi_task_text_zat_a2_stalker_mechanic_task_gt_mutant_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_a2_stalker_mechanic_task_gt_mutant)%
+
+on_complete           = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_mutant:true)%
+on_fail               = %=igi_task_generic_finish(zat_a2_stalker_mechanic_task_gt_mutant:false))%
+condlist_0            = {!task_giver_alive(zat_a2_stalker_mechanic_task_gt_mutant)} fail
+
+;============================================================
+;                {'Zaton', 'Medic', 'Loner'} 
+;                   zat_b22_stalker_medic
+;============================================================
+
+[zat_b22_stalker_medic_task_gt_artifact_world]
+icon                  = ui_inGame2_Kontrakt_s_uchenimi
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_b22_stalker_medic_task_gt_artifact_world)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_b22_stalker_medic_task_gt_artifact_world_job_descr
+task_complete_descr   = igi_task_text_zat_b22_stalker_medic_task_gt_artifact_world_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_b22_stalker_medic_task_gt_artifact_world)%
+
+on_complete           = %=igi_task_generic_finish(zat_b22_stalker_medic_task_gt_artifact_world:true)%
+on_fail               = %=igi_task_generic_finish(zat_b22_stalker_medic_task_gt_artifact_world:false))%
+condlist_0            = {!task_giver_alive(zat_b22_stalker_medic_task_gt_artifact_world)} fail
+
+
+[zat_b22_stalker_medic_task_gt_artifact_stalker]
+icon                  = ui_inGame2_Kontrakt_s_uchenimi
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(zat_b22_stalker_medic_task_gt_artifact_stalker)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_zat_b22_stalker_medic_task_gt_artifact_stalker_job_descr
+task_complete_descr   = igi_task_text_zat_b22_stalker_medic_task_gt_artifact_stalker_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(zat_b22_stalker_medic_task_gt_artifact_stalker)%
+
+on_complete           = %=igi_task_generic_finish(zat_b22_stalker_medic_task_gt_artifact_stalker:true)%
+on_fail               = %=igi_task_generic_finish(zat_b22_stalker_medic_task_gt_artifact_stalker:false))%
+condlist_0            = {!task_giver_alive(zat_b22_stalker_medic_task_gt_artifact_stalker)} fail
 

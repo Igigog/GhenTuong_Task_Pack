@@ -23,7 +23,8 @@
 		"amount":2,
 		"section":"&ChooseOne(gt_package_medicine,gt_package_ammunition)&",
 		"target":"return",
-		"to_create":true
+		"to_create":true,
+		"mark": "treasure_unique"
 		}
 	]
 }

@@ -2,83 +2,13 @@
 ; 
 ;    Anomaly 1.5.1 
 ;    Igigog 
-;    Last change: 03/28/2021, 12:33:15 UTC 
+;    Last change: 09/16/2021, 12:52:16 UTC 
 ;
 ;============================================================
 ;============================================================
-;                {'AW', 'Freedom', 'Medic'} 
-;                     mil_freedom_medic
-;============================================================
-
-[mil_freedom_medic_task_gt_artifact_stalker]
-icon                  = ui_inGame2_Kontrakt_s_uchenimi
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(mil_freedom_medic_task_gt_artifact_stalker)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_mil_freedom_medic_task_gt_artifact_stalker_job_descr
-task_complete_descr   = igi_task_text_mil_freedom_medic_task_gt_artifact_stalker_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(mil_freedom_medic_task_gt_artifact_stalker)%
-
-on_complete           = %=igi_task_generic_finish(mil_freedom_medic_task_gt_artifact_stalker:true)%
-on_fail               = %=igi_task_generic_finish(mil_freedom_medic_task_gt_artifact_stalker:false))%
-condlist_0            = {!task_giver_alive(mil_freedom_medic_task_gt_artifact_stalker)} fail
-
-
-[mil_freedom_medic_task_gt_artifact_world]
-icon                  = ui_inGame2_Kontrakt_s_uchenimi
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(mil_freedom_medic_task_gt_artifact_world)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_mil_freedom_medic_task_gt_artifact_world_job_descr
-task_complete_descr   = igi_task_text_mil_freedom_medic_task_gt_artifact_world_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(mil_freedom_medic_task_gt_artifact_world)%
-
-on_complete           = %=igi_task_generic_finish(mil_freedom_medic_task_gt_artifact_world:true)%
-on_fail               = %=igi_task_generic_finish(mil_freedom_medic_task_gt_artifact_world:false))%
-condlist_0            = {!task_giver_alive(mil_freedom_medic_task_gt_artifact_world)} fail
-
-;============================================================
-;               {'Mechanic', 'AW', 'Freedom'} 
+;               {'Freedom', 'Mechanic', 'AW'} 
 ;      mil_smart_terrain_7_7_freedom_mechanic_stalker
 ;============================================================
-
-[mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply]
-icon                  = ui_inGame2_Osobiy_zakaz
-storyline             = false
-prior                 = 2000
-repeat_timeout        = 16200
-precondition          = {=validate_generic_task(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply)} true, false
-
-title_functor         = igi_task_generic_text
-descr_functor         = igi_task_generic_text
-job_descr             = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply_job_descr
-task_complete_descr   = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply_finish
-
-stage_complete        = 2
-status_functor        = igi_task_generic_status
-target_functor        = igi_task_generic_target
-on_job_descr          = %=igi_task_generic_setup(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply)%
-
-on_complete           = %=igi_task_generic_finish(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply:true)%
-on_fail               = %=igi_task_generic_finish(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply:false))%
-condlist_0            = {!task_giver_alive(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply)} fail
-
 
 [mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_weapon]
 icon                  = ui_inGame2_Neizvestnoe_oruzhie
@@ -92,7 +22,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_weapon_job_descr
 task_complete_descr   = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_weapon_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_weapon)%
@@ -114,7 +44,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_transaction_job_descr
 task_complete_descr   = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_transaction_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_transaction)%
@@ -122,6 +52,28 @@ on_job_descr          = %=igi_task_generic_setup(mil_smart_terrain_7_7_freedom_m
 on_complete           = %=igi_task_generic_finish(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_transaction:true)%
 on_fail               = %=igi_task_generic_finish(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_transaction:false))%
 condlist_0            = {!task_giver_alive(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_transaction)} fail
+
+
+[mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply]
+icon                  = ui_inGame2_Osobiy_zakaz
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply_job_descr
+task_complete_descr   = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply)%
+
+on_complete           = %=igi_task_generic_finish(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply:true)%
+on_fail               = %=igi_task_generic_finish(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply:false))%
+condlist_0            = {!task_giver_alive(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_supply)} fail
 
 
 [mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_heavy]
@@ -136,7 +88,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_heavy_job_descr
 task_complete_descr   = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_heavy_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_heavy)%
@@ -158,7 +110,7 @@ descr_functor         = igi_task_generic_text
 job_descr             = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_mutant_job_descr
 task_complete_descr   = igi_task_text_mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_mutant_finish
 
-stage_complete        = 2
+stage_complete        = 1
 status_functor        = igi_task_generic_status
 target_functor        = igi_task_generic_target
 on_job_descr          = %=igi_task_generic_setup(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_mutant)%
@@ -166,4 +118,52 @@ on_job_descr          = %=igi_task_generic_setup(mil_smart_terrain_7_7_freedom_m
 on_complete           = %=igi_task_generic_finish(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_mutant:true)%
 on_fail               = %=igi_task_generic_finish(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_mutant:false))%
 condlist_0            = {!task_giver_alive(mil_smart_terrain_7_7_freedom_mechanic_stalker_task_gt_mutant)} fail
+
+;============================================================
+;                {'Freedom', 'Medic', 'AW'} 
+;                     mil_freedom_medic
+;============================================================
+
+[mil_freedom_medic_task_gt_artifact_world]
+icon                  = ui_inGame2_Kontrakt_s_uchenimi
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(mil_freedom_medic_task_gt_artifact_world)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_mil_freedom_medic_task_gt_artifact_world_job_descr
+task_complete_descr   = igi_task_text_mil_freedom_medic_task_gt_artifact_world_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(mil_freedom_medic_task_gt_artifact_world)%
+
+on_complete           = %=igi_task_generic_finish(mil_freedom_medic_task_gt_artifact_world:true)%
+on_fail               = %=igi_task_generic_finish(mil_freedom_medic_task_gt_artifact_world:false))%
+condlist_0            = {!task_giver_alive(mil_freedom_medic_task_gt_artifact_world)} fail
+
+
+[mil_freedom_medic_task_gt_artifact_stalker]
+icon                  = ui_inGame2_Kontrakt_s_uchenimi
+storyline             = false
+prior                 = 2000
+repeat_timeout        = 16200
+precondition          = {=validate_generic_task(mil_freedom_medic_task_gt_artifact_stalker)} true, false
+
+title_functor         = igi_task_generic_text
+descr_functor         = igi_task_generic_text
+job_descr             = igi_task_text_mil_freedom_medic_task_gt_artifact_stalker_job_descr
+task_complete_descr   = igi_task_text_mil_freedom_medic_task_gt_artifact_stalker_finish
+
+stage_complete        = 1
+status_functor        = igi_task_generic_status
+target_functor        = igi_task_generic_target
+on_job_descr          = %=igi_task_generic_setup(mil_freedom_medic_task_gt_artifact_stalker)%
+
+on_complete           = %=igi_task_generic_finish(mil_freedom_medic_task_gt_artifact_stalker:true)%
+on_fail               = %=igi_task_generic_finish(mil_freedom_medic_task_gt_artifact_stalker:false))%
+condlist_0            = {!task_giver_alive(mil_freedom_medic_task_gt_artifact_stalker)} fail
 

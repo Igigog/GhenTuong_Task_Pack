@@ -7,7 +7,12 @@
 		{
 		"where":"nearby",
 		"entity_type":"location",
-		"target":"assault"
+		"target":"assault",
+		"immutable_reward": {
+			"fail": {
+				"money": 1230
+			}
+		}
 		},
 		
 		{
@@ -31,7 +36,8 @@
 		"amount":2,
 		"section":"&ChooseOne(gt_package_weapon,gt_package_artifact)&",
 		"target":"return",
-		"to_description":true
+		"to_description":true,
+		"mark": "treasure_unique"
 		}
 	]
 }
