@@ -17,7 +17,7 @@
 		"to_create": false
 	}
 	],
-	"reward_success": {
+	"rewards": {
 		"money": 0
 	}
 }
