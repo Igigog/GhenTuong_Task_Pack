@@ -11,7 +11,7 @@
 			{"if_low_condition":
 				{"repair":true}
 			},
-		"find_in":["npc_inv","nearby"],
+		"search_distance":"1,2",
 		"item_list":"f_gt_weapon_&ScaleToPlayer(3)&",
 		"entity_type":"item",
 		"to_create": false

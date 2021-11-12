@@ -16,7 +16,9 @@
 		}
 	],
 	"rewards_completed": {
-		"goodwill": 10,
-		"money": 0
+		"money": 0,
+		"goodwill": {
+			"value": 10
+		}
 	}
 }
