@@ -9,7 +9,8 @@
 		"find_in": ["npc_inv","anywhere"],
 		"only_enemies":true,
 		"item_list":"f_gt_artifact_&ScaleToPlayer(1,3)&",
-		"possible_endings":"artifact_boxes",
+		"search_type": "find",
+		"search_distance": "0, end",
 		"entity_type":"item",
 		"amount": 1,
 		"to_create": false
