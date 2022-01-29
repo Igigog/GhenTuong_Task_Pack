@@ -8,7 +8,7 @@
 		"target":"get",
 		"item_list":"f_gt_artifact_&ScaleToPlayer(3)&",
 		"find_in":["world","anywhere"],
-		"search_distance": "0, end",
+		"search_distance": "0, 1",
 		"entity_type":"item",
 		"amount":1,
 		"to_create": false
