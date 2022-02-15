@@ -6,6 +6,7 @@
 	"setup": [
 	{
 		"only_enemies":true,
+		"search_in": {"npc_inv": true},
 		"target":"get",
 		"online_activities":
 			{"if_low_condition":
