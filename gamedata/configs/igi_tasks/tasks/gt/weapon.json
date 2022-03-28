@@ -1,17 +1,15 @@
 {
-	"preconditions": {
-		"goodwill": 300
-	},
-	"disabled":false,
-	"setup": [
+	"preconditions": [
+		{
+			"type": "goodwill",
+			"value": 300
+		}
+	],
+	"entities": [
 	{
 		"only_enemies":true,
 		"search_in": {"npc_inv": true},
 		"target":"get",
-		"online_activities":
-			{"if_low_condition":
-				{"repair":true}
-			},
 		"search_distance":"1,2",
 		"item_list":"f_gt_weapon_&ScaleToPlayer(3)&",
 		"entity_type":"item",
@@ -20,5 +18,16 @@
 	],
 	"rewards_completed": {
 		"money": 0
-	}
+	},
+	"actions": [
+	{
+		"conditions": [{
+			"type": "is_low_condition",
+			"id": "$item_1.id$",
+			"max_condition": 45
+		}],
+		"type": "repair",
+		"condition": "&Random(70, 90)&",
+		"id": "$item_1.id$"
+	}]
 }

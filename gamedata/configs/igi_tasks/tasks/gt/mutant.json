@@ -1,14 +1,11 @@
 {
-	"preconditions": {
-	},
-	"disabled":false,
-	"setup": [
-		{
+	"entities": [
+	{
 		"entity_type":"squad",
 		"section":"&TableValueRandom(gt_mutant_&ScaleToPlayer(1,3)&)&",
 		"to_create": true,
 		"where":"nearby",
 		"target":"assault"
-		}
+	}
 	]
 }
