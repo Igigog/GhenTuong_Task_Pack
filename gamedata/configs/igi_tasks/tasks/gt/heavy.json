@@ -3,10 +3,16 @@
 	{
 		"entity_type":"squad",
 		"faction":"&Faction(enemy of actor and enemy of taskgiver)&",
-		"section":"gt_stalker_heavy_&ScaleToPlayer(1,3)&_$this.faction$",
+		"section_name":"gt_stalker_heavy_&ScaleToPlayer(1,3)&_$this.faction$",
 		"to_create":true,
-		"where":"nearby",
+		"where":"$location_1_1.id$",
 		"target":"kill"
+	},
+
+	{
+		"entity_type":"location",
+		"search_for": "smart",
+		"where":"1,1"
 	}
 	]
 }

@@ -17,10 +17,16 @@
 		"to_create": false
 	}
 	],
-	"rewards_completed": {
-		"money": 0,
-		"goodwill": {
-			"value": -40
+	"rewards": {
+		"COMPLETED": {
+			"money": {
+				"value": 0,
+				"blocked": true
+			},
+			"goodwill": {
+				"value": -40,
+				"blocked": true
+			}
 		}
 	}
 }

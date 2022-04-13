@@ -16,9 +16,6 @@
 		"to_create": false
 	}
 	],
-	"rewards_completed": {
-		"money": 0
-	},
 	"actions": [
 	{
 		"conditions": [{
@@ -29,5 +26,13 @@
 		"type": "repair",
 		"condition": "&Random(70, 90)&",
 		"id": "$item_1.id$"
-	}]
+	}],
+	"rewards": {
+		"COMPLETED": {
+			"money": {
+				"value": 0,
+				"blocked": true
+			}
+		}
+	}
 }

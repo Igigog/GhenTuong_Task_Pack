@@ -4,16 +4,16 @@
 	<string id="igi_task_text_pda_package">
 		<text> ажетс€, именно эту посылку нужно доставить.</text>
 	</string>
-	<string id="igi_task_text_gt_package_artifact">
-		<text>јртефакт</text>
+	<string id="gt_package_artifact_name">
+		<text>ящик с артефактом</text>
 	</string>
-	<string id="igi_task_text_gt_package_weapon">
-		<text>ќружие</text>
+	<string id="gt_package_weapon_name">
+		<text>ящик с оружием</text>
 	</string>
-	<string id="igi_task_text_gt_package_medicine">
-		<text>ћедицина</text>
+	<string id="gt_package_medicine_name">
+		<text>ящик с медикаментами</text>
 	</string>
-	<string id="igi_task_text_gt_package_ammunition">
-		<text>ѕатроны</text>
+	<string id="gt_package_ammunition_name">
+		<text>ящик с патронами</text>
 	</string>
 </string_table>

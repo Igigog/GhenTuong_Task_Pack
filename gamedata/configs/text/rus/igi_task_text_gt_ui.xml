@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
-	<!-- UI -->
-	<string id="igi_task_text_gt_targets">
-		<text>Цель</text>
-	</string>
-	<string id="igi_task_text_gt_factions">
-		<text>Группировка</text>
-	</string>
-	<string id="igi_task_text_gt_locations">
-		<text>Место</text>
-	</string>
-	
 	<!-- Mutant -->
 	<string id="igi_task_text_gt_zombie">
 		<text>Зомби</text>
@@ -47,23 +36,6 @@
 	</string>
 	<string id="igi_task_text_gt_gigant">
 		<text>Псевдогигант</text>
-	</string>
-
-	<!-- Package -->
-	<string id="igi_task_text_gt_pda_package">
-		<text>Кажется, именно эту посылку нужно доставить.</text>
-	</string>
-	<string id="igi_task_text_gt_artifact">
-		<text>Артефакт</text>
-	</string>
-	<string id="igi_task_text_gt_weapon">
-		<text>Оружие</text>
-	</string>
-	<string id="igi_task_text_gt_medicine">
-		<text>Медицина</text>
-	</string>
-	<string id="igi_task_text_gt_ammunition">
-		<text>Патроны</text>
 	</string>
 	
 	<!-- Heavy -->

@@ -4,17 +4,17 @@
 	<string id="igi_task_text_pda_package">
 		<text>This package may contain valuable stuff. I am curious to know what is inside.</text>
 	</string>
-	<string id="igi_task_text_gt_package_artifact">
-		<text>Artifact</text>
+	<string id="gt_package_artifact_name">
+		<text>Artifact package</text>
 	</string>
-	<string id="igi_task_text_gt_package_weapon">
-		<text>Weapon</text>
+	<string id="gt_package_weapon_name">
+		<text>Weapon package</text>
 	</string>
-	<string id="igi_task_text_gt_package_medicine">
-		<text>Medicine</text>
+	<string id="gt_package_medicine_name">
+		<text>Medicine package</text>
 	</string>
-	<string id="igi_task_text_gt_package_ammunition">
-		<text>Ammunition</text>
+	<string id="gt_package_ammunition_name">
+		<text>Ammunition package</text>
 	</string>
 	
 </string_table>

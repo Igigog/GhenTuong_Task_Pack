@@ -6,35 +6,37 @@
 	}],
 	"entities": [
 	{
-		"where":"nearby",
+		"where":"1,1",
 		"entity_type":"location",
-		"target":"assault",
-		"immutable_reward": {
-			"fail": {
-				"money": 1230
-			}
-		}
+		"search_for": "smart",
+		"target":"assault"
 	},
 	
 	{
 		"faction":"&Faction(enemy of taskgiver and enemy of actor)&",
-		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
-		"entity_type":"squad"
+		"section_name":"&TableValueByKey(gt_guard, $this.faction$)&",
+		"entity_type":"squad",
+		"to_create": true,
+		"where": "$location_1_1.id$"
 	},
 	
 	{
 		"faction":"&Faction(enemy of $squad_1.faction$)&",
-		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
-		"entity_type":"squad"
+		"section_name":"&TableValueByKey(gt_guard, $this.faction$)&",
+		"entity_type":"squad",
+		"to_create": true,
+		"where": "$location_1_1.id$"
 	},
 	
 	{
 		"entity_type":"item",
 		"amount":2,
-		"section":"&ChooseOne(gt_package_weapon,gt_package_artifact)&",
+		"section_name":"&ChooseOne(gt_package_weapon,gt_package_artifact)&",
 		"target":"return",
 		"to_description":true,
-		"mark": "treasure_unique"
+		"mark": "treasure_unique",
+		"to_create": true,
+		"where": "$location_1_1.id$"
 	}],
 	"actions": [
 	{

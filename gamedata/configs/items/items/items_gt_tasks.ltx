@@ -4,36 +4,23 @@ discovery_dependency										=
 $spawn														= "devices\pda"
 $prefetch													= 16
 cform														= skeleton 
-visual														= dynamics\devices\dev_pda\dev_pda
 class														= II_ATTCH 
 kind														= i_quest
 default_to_ruck												= false
 sprint_allowed												= true
-description													= st_pda_descr
-inv_name													= st_pda_name
-inv_name_short												= st_pda_name
-inv_weight													= 0.1
-inv_grid_width												= 1
-inv_grid_height												= 1
-inv_grid_x													= 0
-inv_grid_y													= 0
-inv_name													= quest_package_name
-inv_name_short												= quest_package_name
 description													= quest_package_desc
 can_trade													= false
-cost														= 0
 attach_angle_offset											= 0.000000, -1.204452, -1.262921 
 attach_position_offset										= 0.081856, -0.035081, 0.011694 
 attach_bone_name											= bip01_l_hand 
 auto_attach													= false 
-can_trade													= false
 
 ;--===================================< Packages >===================================--
 [gt_package_weapon]:gt_tasks
 $spawn														= "gt_tasks_items\gt_package_weapon"
-kind														= i_quest
 visual														= dynamics\box\expl_dinamit
-story_id													= gt_package_weapon
+inv_name													= gt_package_weapon_name
+inv_name_short												= gt_package_weapon_name
 inv_weight													= 3.42
 inv_grid_width												= 2
 inv_grid_height												= 2
@@ -48,9 +35,9 @@ cost                                                        = 75000
 
 [gt_package_artifact]:gt_tasks
 $spawn														= "gt_tasks_items\gt_package_artifact"
-kind														= i_quest
 visual														= dynamics\equipments\trade\kit_hunt
-story_id													= gt_package_weapon
+inv_name													= gt_package_artifact_name
+inv_name_short												= gt_package_artifact_name
 inv_weight													= 4
 inv_grid_width												= 1
 inv_grid_height												= 1
@@ -65,9 +52,9 @@ cost                                                        = 75000
 
 [gt_package_medicine]:gt_tasks
 $spawn														= "gt_tasks_items\gt_package_medicine"
-kind														= i_quest
 visual														= dynamics\repair\armor_repair_pro.ogf
-story_id													= gt_package_weapon
+inv_name													= gt_package_medicine_name
+inv_name_short												= gt_package_medicine_name
 inv_weight													= 2
 inv_grid_width												= 2
 inv_grid_height												= 2
@@ -82,9 +69,9 @@ cost                                                        = 30000
 
 [gt_package_ammunition]:gt_tasks
 $spawn														= "gt_tasks_items\gt_package_ammunition"
-kind														= i_quest
 visual														= dynamics\devices\dev_instrument_1\dev_instrument_1
-story_id													= gt_package_weapon
+inv_name													= gt_package_ammunition_name
+inv_name_short												= gt_package_ammunition_name
 inv_weight													= 2
 inv_grid_width												= 2
 inv_grid_height												= 1

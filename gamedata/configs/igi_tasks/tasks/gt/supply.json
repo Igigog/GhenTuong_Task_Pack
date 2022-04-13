@@ -8,7 +8,8 @@
 	"entities": [
 	{
 		"entity_type":"location",
-		"where":"nearby",
+		"search_for": "smart",
+		"where":"1,1",
 		"target":"assault"
 	},
 	
@@ -16,16 +17,18 @@
 		"amount":2,
 		"faction":"&Faction(enemy of taskgiver and enemy of actor)&",
 		"entity_type":"squad",
-		"section":"&TableValueByKey(gt_guard, $this.faction$)&",
-		"to_create":true
+		"section_name":"&TableValueByKey(gt_guard, $this.faction$)&",
+		"to_create": true,
+		"where": "$location_1_1.id$"
 	},
 	
 	{
 		"entity_type":"item",
 		"amount":2,
-		"section":"&ChooseOne(gt_package_medicine,gt_package_ammunition)&",
+		"section_name":"&ChooseOne(gt_package_medicine,gt_package_ammunition)&",
 		"target":"return",
-		"to_create":true,
+		"to_create": true,
+		"where": "$location_1_1.id$",
 		"mark": "treasure_unique"
 	}
 	]
