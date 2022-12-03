@@ -14,18 +14,18 @@
 	
 	{
 		"faction":"&Faction(enemy of taskgiver and enemy of actor)&",
-		"section_name":"&TableValueByKey(gt_guard, $this.faction$)&",
+		"section_name":"&TableValueByKey(gt_guard, [this.faction])&",
 		"entity_type":"squad",
 		"to_create": true,
-		"where": "$location_1_1.id$"
+		"where": "[location_1_1.id]"
 	},
 	
 	{
-		"faction":"&Faction(enemy of $squad_1.faction$)&",
-		"section_name":"&TableValueByKey(gt_guard, $this.faction$)&",
+		"faction":"&Faction(enemy of [squad_1_1.faction])&",
+		"section_name":"&TableValueByKey(gt_guard, [this.faction])&",
 		"entity_type":"squad",
 		"to_create": true,
-		"where": "$location_1_1.id$"
+		"where": "[location_1_1.id]"
 	},
 	
 	{
@@ -36,16 +36,20 @@
 		"to_description":true,
 		"mark": "treasure_unique",
 		"to_create": true,
-		"where": "$location_1_1.id$"
+		"where": "[location_1_1.id]"
 	}],
 	"actions": [
 	{
 		"conditions": [{
 			"type": "is_online",
-			"id": "$squad_2.id$"
+			"id": "[squad_2_1.id]"
 		}],
 		"type": "change_faction",
-		"faction": "$squad_1.faction$",
-		"id": "$squad_2.id$"
-	}]
+		"faction": "[squad_1_1.faction]",
+		"id": "[squad_2_1.id]"
+	}],
+	"icon": "ui_inGame2_Sdelka",
+	"quest_givers": [
+		{"Mechanic": true}
+	]
 }

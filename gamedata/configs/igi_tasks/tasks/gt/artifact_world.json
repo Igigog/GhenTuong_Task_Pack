@@ -28,5 +28,9 @@
 				"blocked": true
 			}
 		}
-	}
+	},
+	"icon": "ui_inGame2_Kontrakt_s_uchenimi",
+	"quest_givers": [
+		{"Medic": true}
+	]
 }

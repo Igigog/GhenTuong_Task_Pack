@@ -17,9 +17,9 @@
 		"amount":2,
 		"faction":"&Faction(enemy of taskgiver and enemy of actor)&",
 		"entity_type":"squad",
-		"section_name":"&TableValueByKey(gt_guard, $this.faction$)&",
+		"section_name":"&TableValueByKey(gt_guard, [this.faction])&",
 		"to_create": true,
-		"where": "$location_1_1.id$"
+		"where": "[location_1_1.id]"
 	},
 	
 	{
@@ -28,8 +28,12 @@
 		"section_name":"&ChooseOne(gt_package_medicine,gt_package_ammunition)&",
 		"target":"return",
 		"to_create": true,
-		"where": "$location_1_1.id$",
+		"where": "[location_1_1.id]",
 		"mark": "treasure_unique"
 	}
+	],
+	"icon": "ui_inGame2_Osobiy_zakaz",
+	"quest_givers": [
+		{"Mechanic": true}
 	]
 }

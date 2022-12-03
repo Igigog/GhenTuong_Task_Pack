@@ -224,7 +224,6 @@ icons = {
     "gt_mutant": "ui_iconsTotal_mutant",
     "gt_heavy": "ui_inGame2_PD_master_boevih_sistem",
     "gt_artifact_world": "ui_inGame2_Kontrakt_s_uchenimi",
-    "gt_artifact_stalker": "ui_inGame2_Kontrakt_s_uchenimi",
 }
 
 quests = {

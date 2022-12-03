@@ -20,12 +20,12 @@
 	{
 		"conditions": [{
 			"type": "is_low_condition",
-			"id": "$item_1.id$",
+			"id": "[item_1_1.id]",
 			"max_condition": 45
 		}],
 		"type": "repair",
 		"condition": "&Random(70, 90)&",
-		"id": "$item_1.id$"
+		"id": "[item_1_1.id]"
 	}],
 	"rewards": {
 		"COMPLETED": {
@@ -34,5 +34,9 @@
 				"blocked": true
 			}
 		}
-	}
+	},
+	"icon": "ui_inGame2_Neizvestnoe_oruzhie",
+	"quest_givers": [
+		{"Mechanic": true}
+	]
 }

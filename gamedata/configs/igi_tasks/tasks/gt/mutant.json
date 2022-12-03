@@ -4,7 +4,7 @@
 		"entity_type":"squad",
 		"section_name":"&TableValueRandom(gt_mutant_&ScaleToPlayer(1,3)&)&",
 		"to_create": true,
-		"where":"$location_1_1.id$",
+		"where":"[location_1_1.id]",
 		"target":"assault"
 	},
 
@@ -12,7 +12,19 @@
 		"entity_type":"location",
 		"search_for": "smart",
 		"where":"1,1",
-		"target":"assault"
+		"target":"assault",
+		"rewards": {
+			"COMPLETED": {
+				"money": {
+					"value": 1000,
+					"blocked": true
+				}
+			}
+		}
 	}
+	],
+	"icon": "ui_iconsTotal_mutant",
+	"quest_givers": [
+		{"Mechanic": true}
 	]
 }
