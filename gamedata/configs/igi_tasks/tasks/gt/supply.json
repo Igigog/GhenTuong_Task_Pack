@@ -15,9 +15,9 @@
 	
 	{
 		"amount":2,
-		"faction":"&Faction(enemy of taskgiver and enemy of actor)&",
+		"faction":"&Faction('enemy of taskgiver and enemy of actor')&",
 		"entity_type":"squad",
-		"section_name":"&TableValueByKey(gt_guard, [this.faction])&",
+		"section_name":"&TableValueByKey('gt_guard', '[this.faction]')&",
 		"to_create": true,
 		"where": "[location_1_1.id]"
 	},
@@ -25,7 +25,7 @@
 	{
 		"entity_type":"item",
 		"amount":2,
-		"section_name":"&ChooseOne(gt_package_medicine,gt_package_ammunition)&",
+		"section_name":"&ChooseOne('gt_package_medicine','gt_package_ammunition')&",
 		"target":"return",
 		"to_create": true,
 		"where": "[location_1_1.id]",
