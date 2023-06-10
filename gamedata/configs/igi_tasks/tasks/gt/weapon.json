@@ -13,19 +13,20 @@
 		"search_distance":"1,2",
 		"item_list":"f_gt_weapon_&ScaleToPlayer(3)&",
 		"entity_type":"item",
-		"to_create": false
+		"to_create": false,
+		"link_id": "gun"
 	}
 	],
 	"actions": [
 	{
 		"conditions": [{
 			"type": "is_low_condition",
-			"id": "[item_1_1.id]",
+			"id": "[gun.id]",
 			"max_condition": 45
 		}],
 		"type": "repair",
 		"condition": "&Random(70, 90)&",
-		"id": "[item_1_1.id]"
+		"id": "[gun.id]"
 	}],
 	"rewards": {
 		"COMPLETED": {

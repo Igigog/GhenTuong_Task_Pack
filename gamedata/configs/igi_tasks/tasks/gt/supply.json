@@ -10,7 +10,8 @@
 		"entity_type":"location",
 		"search_for": "smart",
 		"where":"1,1",
-		"target":"assault"
+		"target":"assault",
+		"link_id": "smart"
 	},
 	
 	{
@@ -19,7 +20,7 @@
 		"entity_type":"squad",
 		"section_name":"&TableValueByKey('gt_guard', '[this.faction]')&",
 		"to_create": true,
-		"where": "[location_1_1.id]"
+		"where": "[smart.id]"
 	},
 	
 	{
@@ -28,7 +29,7 @@
 		"section_name":"&ChooseOne('gt_package_medicine','gt_package_ammunition')&",
 		"target":"return",
 		"to_create": true,
-		"where": "[location_1_1.id]",
+		"where": "[smart.id]",
 		"mark": "treasure_unique"
 	}
 	],

@@ -9,7 +9,8 @@
 		"where":"1,1",
 		"entity_type":"location",
 		"search_for": "smart",
-		"target":"assault"
+		"target":"assault",
+		"link_id": "smart"
 	},
 	
 	{
@@ -17,15 +18,17 @@
 		"section_name":"&TableValueByKey('gt_guard', '[this.faction]')&",
 		"entity_type":"squad",
 		"to_create": true,
-		"where": "[location_1_1.id]"
+		"where": "[smart.id]",
+		"link_id": "enemy"
 	},
 	
 	{
-		"faction":"&Faction('enemy of [squad_1_1.faction]')&",
+		"faction":"&Faction('enemy of [enemy.faction]')&",
 		"section_name":"&TableValueByKey('gt_guard', '[this.faction]')&",
 		"entity_type":"squad",
 		"to_create": true,
-		"where": "[location_1_1.id]"
+		"where": "[smart.id]",
+		"link_id": "traitor"
 	},
 	
 	{
@@ -36,17 +39,17 @@
 		"to_description":true,
 		"mark": "treasure_unique",
 		"to_create": true,
-		"where": "[location_1_1.id]"
+		"where": "[smart.id]"
 	}],
 	"actions": [
 	{
 		"conditions": [{
 			"type": "is_online",
-			"id": "[squad_2_1.id]"
+			"id": "[traitor.id]"
 		}],
 		"type": "change_faction",
-		"faction": "[squad_1_1.faction]",
-		"id": "[squad_2_1.id]"
+		"faction": "[enemy.faction]",
+		"id": "[traitor.id]"
 	}],
 	"icon": "ui_inGame2_Sdelka",
 	"quest_givers": [
