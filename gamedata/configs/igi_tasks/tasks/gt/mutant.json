@@ -13,6 +13,18 @@
 		"search_for": "smart",
 		"where":"1,1",
 		"target":"assault",
+		"functors": {
+			"status": [
+				"igi_target_assault.status"
+			],
+			"cleanup": [],
+			"create": [
+				"igi_target_assault.create_location"
+			],
+			"setup": [
+				"igi_target_assault.setup_location"
+			]
+		},
 		"rewards": {
 			"COMPLETED": {
 				"money": {
