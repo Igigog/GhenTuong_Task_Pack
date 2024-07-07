@@ -12,17 +12,10 @@
 		"search_for": "smart",
 		"where":"1,1",
 		"target":"assault",
-		"rewards": {
-			"COMPLETED": {
-				"money": {
-					"value": 1000,
-					"blocked": true
-				}
-			}
-		},
 		"link_id": "smart"
 	}
 	],
+	"complexity": 4000,
 	"icon": "ui_iconsTotal_mutant",
 	"quest_givers": [
 		{"Mechanic": true}

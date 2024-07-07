@@ -28,14 +28,7 @@
 		"condition": "&Random(70, 90)&",
 		"id": "[gun.id]"
 	}],
-	"rewards": {
-		"COMPLETED": {
-			"money": {
-				"value": 0,
-				"blocked": true
-			}
-		}
-	},
+	"complexity": 0,
 	"icon": "ui_inGame2_Neizvestnoe_oruzhie",
 	"quest_givers": [
 		{"Mechanic": true}

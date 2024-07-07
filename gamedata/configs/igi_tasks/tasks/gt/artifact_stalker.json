@@ -19,18 +19,7 @@
 		"to_create": false
 	}
 	],
-	"rewards": {
-		"COMPLETED": {
-			"money": {
-				"value": 0,
-				"blocked": true
-			},
-			"goodwill": {
-				"value": 10,
-				"blocked": true
-			}
-		}
-	},
+	"complexity": 10,
 	"icon": "ui_inGame2_Kontrakt_s_uchenimi",
 	"quest_givers": [
 		{"Medic": true}
