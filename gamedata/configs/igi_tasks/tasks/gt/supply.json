@@ -1,9 +1,6 @@
 {
 	"preconditions": [
-		{
-			"type": "rank",
-			"tier": "midgame"
-		}
+		"igi_actions.rank('midgame')"
 	],
 	"entities": [
 	{
@@ -13,7 +10,7 @@
 		"target":"assault",
 		"link_id": "smart"
 	},
-	
+
 	{
 		"amount":2,
 		"faction":"&Faction('enemy of taskgiver and enemy of actor')&",
@@ -22,7 +19,7 @@
 		"to_create": true,
 		"where": "[smart.id]"
 	},
-	
+
 	{
 		"entity_type":"item",
 		"amount":2,

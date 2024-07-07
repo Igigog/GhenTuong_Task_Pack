@@ -1,9 +1,6 @@
 {
 	"preconditions": [
-		{
-			"type": "goodwill",
-			"value": 1500
-		}
+		"igi_actions.goodwill(1500)"
 	],
 	"disabled":false,
 	"entities": [

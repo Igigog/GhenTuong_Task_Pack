@@ -1,9 +1,7 @@
 {
 	"preconditions": [
-	{
-		"type": "rank",
-		"tier": "endgame"
-	}],
+		"igi_actions.rank('endgame')"
+	],
 	"entities": [
 	{
 		"where":"1,1",
@@ -12,7 +10,7 @@
 		"target":"assault",
 		"link_id": "smart"
 	},
-	
+
 	{
 		"faction":"&Faction('enemy of taskgiver and enemy of actor')&",
 		"section_name":"&TableValueByKey('gt_guard', '[this.faction]')&",
@@ -21,7 +19,7 @@
 		"where": "[smart.id]",
 		"link_id": "enemy"
 	},
-	
+
 	{
 		"faction":"&Faction('enemy of [enemy.faction]')&",
 		"section_name":"&TableValueByKey('gt_guard', '[this.faction]')&",
@@ -30,7 +28,7 @@
 		"where": "[smart.id]",
 		"link_id": "traitor"
 	},
-	
+
 	{
 		"entity_type":"item",
 		"amount":2,
@@ -43,13 +41,10 @@
 	}],
 	"actions": [
 	{
-		"conditions": [{
-			"type": "is_online",
-			"id": "[traitor.id]"
-		}],
-		"type": "change_faction",
-		"faction": "[enemy.faction]",
-		"id": "[traitor.id]"
+		"when": [
+			"igi_actions.is_online([traitor.id])"
+		],
+		"run": "igi_actions.change_faction([traitor.id], '[enemy.faction]')"
 	}],
 	"icon": "ui_inGame2_Sdelka",
 	"quest_givers": [
