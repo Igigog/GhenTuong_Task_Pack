@@ -16,7 +16,7 @@
 		"to_create": false
 	}
 	],
-	"complexity": 10,
+	"rewarder": "igi_rewards.STATIC_REWARDER(0, 10)",
 	"icon": "ui_inGame2_Kontrakt_s_uchenimi",
 	"quest_givers": [
 		{"Medic": true}
