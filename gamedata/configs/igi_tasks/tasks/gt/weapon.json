@@ -19,7 +19,7 @@
 		"when": [
 			"igi_actions.is_low_condition([gun.id], 45)"
 		],
-		"run": "igi_actions.repair([gun.id], &igi_macros.Random(70, 90)&)"
+		"run": "igi_actions.repair([gun.id], igi_random.rand(70, 90))"
 	}],
 	"complexity": 0,
 	"icon": "ui_inGame2_Neizvestnoe_oruzhie",

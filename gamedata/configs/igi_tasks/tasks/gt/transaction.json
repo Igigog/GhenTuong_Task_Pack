@@ -32,7 +32,7 @@
 	{
 		"entity_type":"item",
 		"amount":2,
-		"section_name":"&igi_macros.ChooseOne('gt_package_weapon','gt_package_artifact')&",
+		"section_name":"&igi_utils.choose('gt_package_weapon','gt_package_artifact')&",
 		"target":"return",
 		"to_description":true,
 		"mark": "treasure_unique",
