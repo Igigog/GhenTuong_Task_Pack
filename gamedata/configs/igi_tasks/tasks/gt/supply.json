@@ -13,7 +13,7 @@
 
 	{
 		"amount":2,
-		"faction":"&igi_macros.Faction('enemy of taskgiver and enemy of actor')&",
+		"faction":"&igi_macros.Faction([CACHE.task_giver_id], 'enemy of taskgiver and enemy of actor')&",
 		"entity_type":"squad",
 		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
 		"to_create": true,

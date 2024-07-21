@@ -12,7 +12,7 @@
 	},
 
 	{
-		"faction":"&igi_macros.Faction('enemy of taskgiver and enemy of actor')&",
+		"faction":"&igi_macros.Faction([CACHE.task_giver_id], 'enemy of taskgiver and enemy of actor')&",
 		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
 		"entity_type":"squad",
 		"to_create": true,
@@ -21,7 +21,7 @@
 	},
 
 	{
-		"faction":"&igi_macros.Faction('enemy of [enemy.faction]')&",
+		"faction":"&igi_macros.Faction([CACHE.task_giver_id], 'enemy of [enemy.faction]')&",
 		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
 		"entity_type":"squad",
 		"to_create": true,
