@@ -12,8 +12,8 @@
 	},
 
 	{
-		"faction":"&Faction('enemy of taskgiver and enemy of actor')&",
-		"section_name":"&TableValueByKey('gt_guard', '[this.faction]')&",
+		"faction":"&igi_macros.Faction('enemy of taskgiver and enemy of actor')&",
+		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
 		"entity_type":"squad",
 		"to_create": true,
 		"where": "[smart.id]",
@@ -21,8 +21,8 @@
 	},
 
 	{
-		"faction":"&Faction('enemy of [enemy.faction]')&",
-		"section_name":"&TableValueByKey('gt_guard', '[this.faction]')&",
+		"faction":"&igi_macros.Faction('enemy of [enemy.faction]')&",
+		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
 		"entity_type":"squad",
 		"to_create": true,
 		"where": "[smart.id]",
@@ -32,7 +32,7 @@
 	{
 		"entity_type":"item",
 		"amount":2,
-		"section_name":"&ChooseOne('gt_package_weapon','gt_package_artifact')&",
+		"section_name":"&igi_macros.ChooseOne('gt_package_weapon','gt_package_artifact')&",
 		"target":"return",
 		"to_description":true,
 		"mark": "treasure_unique",

@@ -8,7 +8,7 @@
 		"target":"get",
 		"search_in": {"npc_inv": true},
 		"only_enemies":true,
-		"item_list":"f_gt_artifact_&ScaleToPlayer(1,3)&",
+		"item_list":"f_gt_artifact_&igi_macros.ScaleToPlayer(1,3)&",
 		"search_type": "find",
 		"search_distance": "0, 1",
 		"entity_type":"item",

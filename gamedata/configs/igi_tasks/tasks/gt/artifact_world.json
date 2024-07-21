@@ -6,7 +6,7 @@
 	"entities": [
 	{
 		"target":"get",
-		"item_list":"f_gt_artifact_&ScaleToPlayer(3)&",
+		"item_list":"f_gt_artifact_&igi_macros.ScaleToPlayer(3)&",
 		"search_in":{"world": true},
 		"search_distance": "0, 1",
 		"entity_type":"item",
