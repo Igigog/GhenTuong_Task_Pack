@@ -31,14 +31,25 @@
 
 	{
 		"entity_type":"item",
-		"amount":2,
 		"section_name":"&igi_utils.choose('gt_package_weapon','gt_package_artifact')&",
 		"target":"return",
 		"to_description":true,
 		"mark": "treasure_unique",
 		"to_create": true,
+		"where": "[smart.id]",
+		"link_id": "package"
+	},
+
+	{
+		"entity_type":"item",
+		"section_name":"[package.section_name]",
+		"target":"return",
+		"to_description":true,
+		"mark": "treasure_unique",
+		"to_create": true,
 		"where": "[smart.id]"
-	}],
+	}
+	],
 	"actions": [
 	{
 		"when": "igi_actions.is_online([traitor.id])",

@@ -12,18 +12,35 @@
 	},
 
 	{
-		"amount":2,
 		"faction":"&igi_macros.Faction([CACHE.task_giver_id], 'enemy of taskgiver and enemy of actor')&",
 		"entity_type":"squad",
 		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
+		"to_create": true,
+		"where": "[smart.id]",
+		"link_id": "enemy"
+	},
+
+	{
+		"faction":"[enemy.faction]",
+		"entity_type":"squad",
+		"section_name":"[enemy.section_name]",
 		"to_create": true,
 		"where": "[smart.id]"
 	},
 
 	{
 		"entity_type":"item",
-		"amount":2,
 		"section_name":"&igi_utils.choose('gt_package_medicine','gt_package_ammunition')&",
+		"target":"return",
+		"to_create": true,
+		"where": "[smart.id]",
+		"mark": "treasure_unique",
+		"link_id": "package"
+	},
+
+	{
+		"entity_type":"item",
+		"section_name":"[package.section_name]",
 		"target":"return",
 		"to_create": true,
 		"where": "[smart.id]",
