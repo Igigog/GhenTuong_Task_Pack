@@ -12,6 +12,7 @@
 		"search_for": "smart",
 		"where":"1,1",
 		"target":"assault",
+		"section_name": "&igi_helper.se_object([this.id]):section_name()&",
 		"link_id": "smart"
 	}
 	],

@@ -12,6 +12,7 @@
 	{
 		"entity_type":"location",
 		"search_for": "smart",
+		"section_name": "&igi_helper.se_object([this.id]):section_name()&",
 		"link_id": "smart",
 		"where":"1,1"
 	}

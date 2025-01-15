@@ -10,6 +10,7 @@
 		"search_distance":"1,2",
 		"item_list":"f_gt_weapon_&igi_macros.ScaleToPlayer(3)&",
 		"entity_type":"item",
+		"section_name": "&igi_helper.se_object([this.id]):section_name()&",
 		"to_create": false,
 		"link_id": "gun"
 	}
