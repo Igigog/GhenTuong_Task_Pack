@@ -41,9 +41,7 @@
 	}],
 	"actions": [
 	{
-		"when": [
-			"igi_actions.is_online([traitor.id])"
-		],
+		"when": "igi_actions.is_online([traitor.id])",
 		"run": "igi_actions.change_faction([traitor.id], '[enemy.faction]')"
 	}],
 	"icon": "ui_inGame2_Sdelka",
