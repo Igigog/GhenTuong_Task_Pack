@@ -6,12 +6,8 @@
 	"entities": [
 	{
 		"target":"get",
-		"item_list":"f_gt_artifact_&igi_macros.ScaleToPlayer(3)&",
-		"search_in":{"world": true},
-		"search_distance": "0, 1",
-		"entity_type":"item",
-		"amount":1,
-		"to_create": false
+		"ids": "&igi_finder.find_objects_in_world(0, 1, igi_db.get('f_gt_artifact'))&",
+		"GEN": "igi_generate.Split('ids', 'id', 1)"
 	}
 	],
 	"rewarder" : "igi_rewards.STATIC_REWARDER(0, -40)",

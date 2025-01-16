@@ -4,14 +4,9 @@
 	],
 	"entities": [
 	{
-		"only_enemies":true,
-		"search_in": {"npc_inv": true},
-		"target":"get",
-		"search_distance":"1,2",
-		"item_list":"f_gt_weapon_&igi_macros.ScaleToPlayer(3)&",
-		"entity_type":"item",
 		"section_name": "&igi_helper.se_object([this.id]):section_name()&",
-		"to_create": false,
+		"ids": "&igi_finder.find_items_in_enemy(1, 2, igi_db.get('f_gt_weapon_' .. tostring(igi_macros.ScaleToPlayer(3))))&",
+		"GEN": "igi_generate.Split('ids', 'id', 1)",
 		"link_id": "gun"
 	}
 	],
