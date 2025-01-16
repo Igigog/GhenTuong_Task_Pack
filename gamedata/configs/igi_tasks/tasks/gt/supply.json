@@ -4,11 +4,10 @@
 	],
 	"entities": [
 	{
-		"entity_type":"location",
-		"search_for": "smart",
 		"section_name": "&igi_helper.se_object([this.id]):section_name()&",
-		"where":"1,1",
 		"target":"assault",
+		"GEN": "igi_generate.Split('ids', 'id', 1)",
+		"ids": "&igi_finder.get_smarts_string(1,1)&",
 		"link_id": "smart"
 	},
 
