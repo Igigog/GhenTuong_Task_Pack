@@ -12,39 +12,24 @@
 	},
 
 	{
+		"GEN": "igi_generate.Amount(2)",
 		"faction":"&igi_macros.Faction([CACHE.task_giver_id], 'enemy of taskgiver and enemy of actor')&",
-		"entity_type":"squad",
 		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
-		"to_create": true,
-		"where": "[smart.id]",
+		"id": "!&igi_target_basic.squad_create([smart.id], '[this.section_name]').id&",
+		"init": "!&igi_target_basic.init_squad([this.id])&",
 		"link_id": "enemy"
 	},
 
 	{
-		"faction":"[enemy.faction]",
-		"entity_type":"squad",
-		"section_name":"[enemy.section_name]",
-		"to_create": true,
-		"where": "[smart.id]"
-	},
-
-	{
+		"GEN": "igi_generate.Amount(2)",
 		"entity_type":"item",
 		"section_name":"&igi_utils.choose('gt_package_medicine','gt_package_ammunition')&",
+		"id": "!&igi_target_basic.create_on_smart('[this.section_name]', [smart.id])&",
 		"target":"return",
 		"to_create": true,
 		"where": "[smart.id]",
 		"mark": "treasure_unique",
 		"link_id": "package"
-	},
-
-	{
-		"entity_type":"item",
-		"section_name":"[package.section_name]",
-		"target":"return",
-		"to_create": true,
-		"where": "[smart.id]",
-		"mark": "treasure_unique"
 	}
 	],
 	"icon": "ui_inGame2_Osobiy_zakaz",

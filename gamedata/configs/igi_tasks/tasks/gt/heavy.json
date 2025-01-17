@@ -1,11 +1,10 @@
 {
 	"entities": [
 	{
-		"entity_type":"squad",
 		"faction":"&igi_macros.Faction([CACHE.task_giver_id], 'enemy of actor and enemy of taskgiver')&",
 		"section_name":"gt_stalker_heavy_&igi_macros.ScaleToPlayer(1,3)&_[this.faction]",
-		"to_create":true,
-		"where":"[smart.id]",
+		"id": "!&igi_target_basic.squad_create([smart.id], '[this.section_name]').id&",
+		"init": "!&igi_target_basic.init_squad([this.id])&",
 		"target":"kill"
 	},
 

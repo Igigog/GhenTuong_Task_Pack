@@ -14,40 +14,29 @@
 	{
 		"faction":"&igi_macros.Faction([CACHE.task_giver_id], 'enemy of taskgiver and enemy of actor')&",
 		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
-		"entity_type":"squad",
-		"to_create": true,
-		"where": "[smart.id]",
+		"id": "!&igi_target_basic.squad_create([smart.id], '[this.section_name]').id&",
+		"init": "!&igi_target_basic.init_squad([this.id])&",
 		"link_id": "enemy"
 	},
 
 	{
 		"faction":"&igi_macros.Faction([CACHE.task_giver_id], 'enemy of [enemy.faction]')&",
 		"section_name":"&igi_macros.TableValueByKey('gt_guard', '[this.faction]')&",
-		"entity_type":"squad",
-		"to_create": true,
-		"where": "[smart.id]",
+		"id": "!&igi_target_basic.squad_create([smart.id], '[this.section_name]').id&",
+		"init": "!&igi_target_basic.init_squad([this.id])&",
 		"link_id": "traitor"
 	},
 
 	{
-		"entity_type":"item",
+		"GEN": "igi_generate.Amount(2)",
 		"section_name":"&igi_utils.choose('gt_package_weapon','gt_package_artifact')&",
 		"target":"return",
+		"id": "!&igi_target_basic.create_on_smart('[this.section_name]', [smart.id])&",
 		"to_description":true,
 		"mark": "treasure_unique",
 		"to_create": true,
 		"where": "[smart.id]",
 		"link_id": "package"
-	},
-
-	{
-		"entity_type":"item",
-		"section_name":"[package.section_name]",
-		"target":"return",
-		"to_description":true,
-		"mark": "treasure_unique",
-		"to_create": true,
-		"where": "[smart.id]"
 	}
 	],
 	"actions": [
