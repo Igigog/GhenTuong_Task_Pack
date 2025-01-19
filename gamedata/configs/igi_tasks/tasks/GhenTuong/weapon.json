@@ -15,7 +15,8 @@
 				"when": "1$ 'igi_actions.is_low_condition(|this.id|, 45)'",
 				"run": "1$ 'get_object_by_id(|this.id|):set_condition(|this.condition_after|)'"
 			}
-		]
+		],
+		"to_description": true
 	}
 	],
 	"complexity": 0,

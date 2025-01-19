@@ -10,7 +10,8 @@
 		"CONTROLLER":"igi_target_assault.Assault",
 		"section_name": "$ alife_object(|this.id|):section_name()",
 		"name": "$ alife_object(|this.id|):name()",
-		"link_id": "smart"
+		"link_id": "smart",
+		"to_description": true
 	},
 
 	{
@@ -18,7 +19,8 @@
 		"section_name":"$ igi_helper.db_ini:r_value('gt_guard', |this.faction|)",
 		"id": "1$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
 		"init": "1$ igi_target_basic.init_squad(|this.id|) or very_random_variable or 1",
-		"link_id": "enemy"
+		"link_id": "enemy",
+		"to_description": true
 	},
 
 	{
@@ -31,7 +33,8 @@
 				"when": "1$ 'igi_actions.is_online(|this.id|)'",
 				"run": "1$ 'igi_actions.change_faction(|this.id|, |enemy.faction|)'"
 			}
-		]
+		],
+		"to_description": true
 	},
 
 	{

@@ -2,9 +2,11 @@
 	"WTF_VERSION": "4.0",
 	"entities": [
 	{
-		"section_name":"$ igi_macros.TableValueRandom('gt_mutant_'..wtf_gt_tasks.scale_to_player())",
+		"section_name":"$ igi_utils.random_table_value(igi_helper.db_ini:collect_section(|this.mutants_section|))",
+		"mutants_section": "$ 'gt_mutant_'..wtf_gt_tasks.scale_to_player()",
 		"id": "1$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
-		"init": "1$ igi_target_basic.init_squad(|this.id|)"
+		"init": "1$ igi_target_basic.init_squad(|this.id|) or 1",
+		"to_description": true
 	},
 
 	{
@@ -13,10 +15,10 @@
 		"CONTROLLER":"igi_target_assault.Assault",
 		"section_name": "$ alife_object(|this.id|):section_name()",
 		"name": "$ alife_object(|this.id|):name()",
-		"link_id": "smart"
+		"link_id": "smart",
+		"to_description": true
 	}
 	],
-	"complexity": 4000,
 	"icon": "ui_iconsTotal_mutant",
 	"quest_givers": [
 		{"Mechanic": true}
