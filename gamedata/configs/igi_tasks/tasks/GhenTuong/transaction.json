@@ -1,4 +1,5 @@
 {
+	"WTF_VERSION": "4.0",
 	"preconditions": [
 		"$ db.actor:character_rank() >= 5000"
 	],

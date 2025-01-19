@@ -1,4 +1,5 @@
 {
+	"WTF_VERSION": "4.0",
 	"entities": [
 	{
 		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of actor and enemy of taskgiver')",

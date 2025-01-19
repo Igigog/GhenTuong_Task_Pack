@@ -1,4 +1,5 @@
 {
+	"WTF_VERSION": "4.0",
 	"entities": [
 	{
 		"section_name":"$ igi_macros.TableValueRandom('gt_mutant_'..wtf_gt_tasks.scale_to_player())",

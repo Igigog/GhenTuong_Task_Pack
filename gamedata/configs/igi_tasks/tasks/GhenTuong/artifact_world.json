@@ -1,4 +1,5 @@
 {
+	"WTF_VERSION": "4.0",
 	"preconditions": [
 		"$ db.actor:community_goodwill(|CACHE.tg_community|) >= 1500"
 	],

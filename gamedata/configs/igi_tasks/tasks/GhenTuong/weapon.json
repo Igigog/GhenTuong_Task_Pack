@@ -1,4 +1,5 @@
 {
+	"WTF_VERSION": "4.0",
 	"preconditions": [
 		"$ db.actor:community_goodwill(igi_helper.get_community_by_id(|CACHE.task_giver_id|)) >= 300"
 	],
