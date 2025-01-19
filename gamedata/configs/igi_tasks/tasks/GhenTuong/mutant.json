@@ -1,0 +1,23 @@
+{
+	"entities": [
+	{
+		"section_name":"$ igi_macros.TableValueRandom('gt_mutant_'..wtf_gt_tasks.scale_to_player())",
+		"id": "1$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
+		"init": "1$ igi_target_basic.init_squad(|this.id|)"
+	},
+
+	{
+		"GEN": "igi_generate.Split('ids', 'id', 1)",
+		"ids": "$ igi_finder.get_smarts(1,1)",
+		"CONTROLLER":"igi_target_assault.Assault",
+		"section_name": "$ alife_object(|this.id|):section_name()",
+		"name": "$ alife_object(|this.id|):name()",
+		"link_id": "smart"
+	}
+	],
+	"complexity": 4000,
+	"icon": "ui_iconsTotal_mutant",
+	"quest_givers": [
+		{"Mechanic": true}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"preconditions": [
+		"$ db.actor:community_goodwill(|CACHE.tg_community|) >= 1500"
+	],
+	"tg_community": "$ igi_helper.get_community_by_id(|CACHE.task_giver_id|)",
+	"entities": [
+	{
+		"CONTROLLER":"igi_target_get.Get",
+		"ids": "$ igi_finder.find_objects_in_world(0, 1, igi_helper.db_ini:collect_section('f_gt_artifact'))",
+		"GEN": "igi_generate.Split('ids', 'id', 1)",
+		"force_online": "1$ igi_target_basic.force_parent_online(alife_object(|this.id|))"
+	}
+	],
+	"rewarder" : "igi_rewards.STATIC_REWARDER(0, -40)",
+	"icon": "ui_inGame2_Kontrakt_s_uchenimi",
+	"quest_givers": [
+		{"Medic": true}
+	]
+}

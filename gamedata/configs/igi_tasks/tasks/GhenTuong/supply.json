@@ -1,0 +1,41 @@
+{
+	"preconditions": [
+		"$ db.actor:character_rank() >= 2500"
+	],
+	"entities": [
+	{
+		"section_name": "$ alife_object(|this.id|):section_name()",
+		"CONTROLLER":"igi_target_assault.Assault",
+		"GEN": "igi_generate.Split('ids', 'id', 1)",
+		"ids": "$ igi_finder.get_smarts(1,1)",
+		"name": "$ alife_object(|this.id|):name()",
+		"link_id": "smart"
+	},
+
+	{
+		"GEN": "igi_generate.Amount(2)",
+		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of taskgiver and enemy of actor')",
+		"section_name":"$ igi_helper.db_ini:r_value('gt_guard', |this.faction|)",
+		"id": "1$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
+		"init": "1$ igi_target_basic.init_squad(|this.id|)",
+		"link_id": "enemy"
+	},
+
+	{
+		"GEN": "igi_generate.Amount(2)",
+		"section_name":"$ igi_utils.choose('gt_package_medicine','gt_package_ammunition')",
+		"id": "1$ igi_target_basic.create_on_smart(|this.section_name|, |smart.id|)",
+		"CONTROLLER":"igi_target_return.Return",
+		"actions": [
+			{
+				"when": "true",
+				"run": "1$ 'igi_actions.update_mark([this.id], \"treasure_unique\") or true'"
+			}
+		]
+	}
+	],
+	"icon": "ui_inGame2_Osobiy_zakaz",
+	"quest_givers": [
+		{"Mechanic": true}
+	]
+}
