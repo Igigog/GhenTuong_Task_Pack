@@ -17,7 +17,7 @@
 		"link_id": "artifact"
 	}
 	],
-	"rewarder" : "igi_rewards.STATIC_REWARDER(0, -40)",
+	"rewarder" : "igi_rewards.Static(0, -40)",
 	"icon": "ui_inGame2_Kontrakt_s_uchenimi",
 	"quest_givers": [
 		{"Medic": true}
