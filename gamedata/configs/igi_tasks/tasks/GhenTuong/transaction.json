@@ -8,7 +8,6 @@
 		"GEN": "igi_generate.Split('ids', 'id', 1)",
 		"ids": "$ igi_finder.get_smarts(1,1)",
 		"CONTROLLER":"igi_target_assault.Assault",
-		"section_name": "$ alife_object(|this.id|):section_name()",
 		"name": "$ alife_object(|this.id|):name()",
 		"link_id": "smart",
 		"to_description": true

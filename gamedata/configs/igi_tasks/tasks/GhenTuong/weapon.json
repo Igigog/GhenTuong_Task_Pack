@@ -5,7 +5,6 @@
 	],
 	"entities": [
 	{
-		"section_name": "$ alife_object(|this.id|):section_name()",
 		"ids": "$ igi_finder.find_items_in_enemy(1, 2, igi_helper.db_ini:collect_section('f_gt_weapon_' .. tostring(wtf_gt_tasks.scale_to_player())))",
 		"condition_after": "1$ igi_random.rand(70, 90) / 100",
 		"GEN": "igi_generate.Split('ids', 'id', 1)",

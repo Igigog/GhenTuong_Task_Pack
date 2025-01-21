@@ -5,7 +5,6 @@
 	],
 	"entities": [
 	{
-		"section_name": "$ alife_object(|this.id|):section_name()",
 		"CONTROLLER":"igi_target_assault.Assault",
 		"GEN": "igi_generate.Split('ids', 'id', 1)",
 		"ids": "$ igi_finder.get_smarts(1,1)",
