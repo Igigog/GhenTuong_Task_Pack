@@ -12,7 +12,6 @@
 		"CONTROLLER":"igi_target_get.Get",
 		"ids": "$ igi_finder.find_objects_in_world(0, 1, igi_helper.db_ini:collect_section('f_gt_artifact'))",
 		"GEN": "igi_generate.Split('ids', 'id', 1)",
-		"force_online": "1$ igi_target_basic.force_parent_online(alife_object(|this.id|)) or 1",
 		"to_description": true,
 		"link_id": "artifact"
 	}

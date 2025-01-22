@@ -5,7 +5,7 @@
 		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of actor and enemy of taskgiver')",
 		"section_name":"$ 'gt_stalker_heavy_' .. wtf_gt_tasks.scale_to_player() .. '_' .. |this.faction|",
 		"id": "1$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
-		"init": "1$ igi_target_basic.init_squad(|this.id|) or 1",
+		"init": "1$ igi_helper.init_squad(|this.id|)",
 		"CONTROLLER":"igi_target_kill.Kill",
 		"to_description": true
 	},
