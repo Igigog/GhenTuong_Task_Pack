@@ -7,12 +7,12 @@
 	{
 		"ids": "$ igi_finder.find_items_in_enemy(1, 2, igi_helper.db_ini:collect_section('f_gt_weapon_' .. tostring(wtf_gt_tasks.scale_to_player())))",
 		"condition_after": "1$ igi_random.rand(70, 90) / 100",
-		"GEN": "igi_generate.Split('ids', 'id', 1)",
-		"CONTROLLER": "igi_target_get.Get",
+		"GEN": "@$ igi_generate.Split('ids', 'id', 1)",
+		"CONTROLLER": "@$ igi_target_get.Get",
 		"actions": [
 			{
-				"when": "1$ 'igi_actions.is_low_condition(|this.id|, 45)'",
-				"run": "1$ 'get_object_by_id(|this.id|):set_condition(|this.condition_after|)'"
+				"when": "@$  igi_actions.is_low_condition(|this.id|, 45)",
+				"run": "@$  get_object_by_id(|this.id|):set_condition(|this.condition_after|)"
 			}
 		],
 		"to_description": true

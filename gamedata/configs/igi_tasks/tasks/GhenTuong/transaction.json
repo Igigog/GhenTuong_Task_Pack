@@ -5,9 +5,9 @@
 	],
 	"entities": [
 	{
-		"GEN": "igi_generate.Split('ids', 'id', 1)",
+		"GEN": "@$ igi_generate.Split('ids', 'id', 1)",
 		"ids": "$ igi_finder.get_smarts(1,1)",
-		"CONTROLLER":"igi_target_assault.Assault",
+		"CONTROLLER":"@$ igi_target_assault.Assault",
 		"name": "$ alife_object(|this.id|):name()",
 		"link_id": "smart",
 		"to_description": true
@@ -29,23 +29,23 @@
 		"init": "1$ igi_helper.init_squad(|this.id|)",
 		"actions": [
 			{
-				"when": "1$ 'igi_actions.is_online(|this.id|)'",
-				"run": "1$ 'igi_actions.change_faction(|this.id|, |enemy.faction|)'"
+				"when": "@$ igi_actions.is_online(|this.id|)",
+				"run": "@$ igi_actions.change_faction(|this.id|, |enemy.faction|)"
 			}
 		],
 		"to_description": true
 	},
 
 	{
-		"GEN": "igi_generate.Amount(2)",
+		"GEN": "@$ igi_generate.Amount(2)",
 		"section_name":"$ igi_utils.choose('gt_package_weapon','gt_package_artifact')",
-		"CONTROLLER":"igi_target_return.Return",
+		"CONTROLLER":"@$ igi_target_return.Return",
 		"id": "1$ igi_helper.create_on_smart(|this.section_name|, |smart.id|)",
 		"to_description":true,
 		"actions": [
 			{
-				"when": "true",
-				"run": "1$ 'igi_actions.update_mark(|this.id|, \"treasure_unique\") or true'"
+				"when": "@$ true",
+				"run": "@$ igi_actions.update_mark(|this.id|, \"treasure_unique\") or true"
 			}
 		]
 	}
