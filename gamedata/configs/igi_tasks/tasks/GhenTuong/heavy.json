@@ -1,5 +1,6 @@
 {
 	"WTF_VERSION": "4.0",
+	"CREDITS": "GhenTuong - idea and initial implementation\\nIgigog - support",
 	"entities": [
 	{
 		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of actor and enemy of taskgiver')",

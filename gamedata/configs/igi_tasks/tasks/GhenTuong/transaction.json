@@ -1,5 +1,6 @@
 {
-	"WTF_VERSION": "4.0",
+	"WTF_VERSION": "4.1",
+	"CREDITS": "GhenTuong - idea and initial implementation\\nIgigog - support",
 	"preconditions": [
 		"$ db.actor:character_rank() >= 5000"
 	],

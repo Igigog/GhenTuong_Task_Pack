@@ -1,5 +1,6 @@
 {
 	"WTF_VERSION": "4.0",
+	"CREDITS": "GhenTuong - idea and initial implementation\\nIgigog - support",
 	"entities": [
 	{
 		"section_name":"$ igi_utils.random_table_value(igi_helper.db_ini:collect_section(|this.mutants_section|))",
