@@ -1,5 +1,5 @@
 {
-	"WTF_VERSION": "4.0",
+	"WTF_VERSION": "4.2",
 	"CREDITS": "GhenTuong - idea and initial implementation\\nIgigog - support",
 	"preconditions": [
 		"$ db.actor:community_goodwill(|CACHE.tg_community|) >= 1000"
@@ -12,9 +12,9 @@
 	{
 		"CONTROLLER":"@$ igi_target_get.Get",
 		"ids": "$ igi_finder.find_items_in_enemy(0, 1, igi_helper.db_ini:collect_section('f_gt_artifact'))",
-		"GEN": "@$ igi_generate.Split('ids', 'id', 1)",
-		"parent_id": "1$ alife_object(|this.id|).parent_id",
-		"force_online": "1$ igi_helper.init_squad(|this.parent_id|)",
+		"id": "$ wtf.shuffle(|this.ids|)[1] or false",
+		"parent_id": "init$ alife_object(|this.id|).parent_id",
+		"force_online": "init$ igi_helper.init_squad(|this.parent_id|)",
 		"to_description": true,
 		"link_id": "artifact"
 	}

@@ -1,5 +1,5 @@
 {
-	"WTF_VERSION": "4.0",
+	"WTF_VERSION": "4.2",
 	"CREDITS": "GhenTuong - idea and initial implementation\\nIgigog - support",
 	"preconditions": [
 		"$ db.actor:community_goodwill(|CACHE.tg_community|) >= 1500"
@@ -12,7 +12,7 @@
 	{
 		"CONTROLLER":"@$ igi_target_get.Get",
 		"ids": "$ igi_finder.find_objects_in_world(0, 1, igi_helper.db_ini:collect_section('f_gt_artifact'))",
-		"GEN": "@$ igi_generate.Split('ids', 'id', 1)",
+		"id": "$ wtf.shuffle(|this.ids|)[1] or false",
 		"to_description": true,
 		"link_id": "artifact"
 	}
