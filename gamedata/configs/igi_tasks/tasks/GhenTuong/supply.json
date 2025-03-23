@@ -16,7 +16,8 @@
 
 	{
 		"GEN": "@$ igi_generate.Amount(2)",
-		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of taskgiver and enemy of actor')",
+		"factions":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of taskgiver and enemy of actor')",
+		"faction": "$ wtf.shuffle(wtf.keys(|this.factions|))[1]",
 		"section_name":"$ igi_helper.db_ini:r_value('gt_guard', |this.faction|)",
 		"id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
 		"init": "init$ igi_helper.init_squad(|this.id|)",
