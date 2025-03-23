@@ -33,7 +33,7 @@
 		"actions": [
 			{
 				"when": "@$ igi_actions.is_online(|this.id|)",
-				"run": "@$ igi_actions.change_faction(|this.id|, |enemy.faction|)"
+				"run": "@$ igi_actions.change_faction(|this.id|, |enemy.faction|) or false"
 			}
 		],
 		"to_description": true
