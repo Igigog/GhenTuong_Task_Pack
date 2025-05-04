@@ -17,8 +17,8 @@
 	{
 		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of taskgiver and enemy of actor')",
 		"section_name":"$ igi_helper.db_ini:r_value('gt_guard', |this.faction|)",
-		"id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
-		"init": "init$ igi_helper.init_squad(|this.id|)",
+		"smart_id": "init$ |smart.id|",
+		"HELPERS": ["@$ wtf.CreateSquad", "@$ wtf.ForceOnline"],
 		"link_id": "enemy",
 		"to_description": true
 	},
@@ -26,14 +26,8 @@
 	{
 		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of |enemy.faction|')",
 		"section_name":"$ igi_helper.db_ini:r_value('gt_guard', |this.faction|)",
-		"id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
-		"init": "init$ igi_helper.init_squad(|this.id|)",
-		"actions": [
-			{
-				"when": "@$ igi_actions.is_online(|this.id|)",
-				"run": "@$ igi_actions.change_faction(|this.id|, |enemy.faction|) or false"
-			}
-		],
+		"smart_id": "init$ |smart.id|",
+		"HELPERS": ["@$ wtf.CreateSquad", "@$ wtf.ForceOnline", "@$ wtf.ChangeFaction(|enemy.faction|)"],
 		"to_description": true
 	},
 
@@ -43,12 +37,7 @@
 		"CONTROLLER":"@$ igi_target_return.Return",
 		"id": "init$ igi_helper.create_on_smart(|this.section_name|, |smart.id|)",
 		"to_description":true,
-		"actions": [
-			{
-				"when": "@$ true",
-				"run": "@$ igi_actions.update_mark(|this.id|, \"treasure_unique\") or true"
-			}
-		]
+		"HELPERS": ["@$ wtf.MapIcon('treasure_unique')"]
 	}
 	],
 	"icon": "ui_inGame2_Sdelka",
