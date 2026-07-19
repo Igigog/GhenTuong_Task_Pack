@@ -1,24 +1,26 @@
 {
-	"WTF_VERSION": "4.2",
+	"WTF_VERSION": "4.3",
 	"CREDITS": "GhenTuong - idea and initial implementation\\nIgigog - support",
-	"entities": [
-	{
-		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of actor and enemy of taskgiver')",
-		"section_name":"$ 'gt_stalker_heavy_' .. wtf_gt_tasks.scale_to_player() .. '_' .. |this.faction|",
-		"smart_id": "init$ |smart.id|",
-		"HELPERS": ["@$ wtf.CreateSquad", "@$ wtf.ForceOnline"],
-		"CONTROLLER":"@$ igi_target_kill.Kill",
-		"to_description": true
+	"description": {
+		"locations": ["$ igi_description.get_smart_name_by_id(|frame.smart_id|)"],
+		"factions": ["$ |frame.faction|"]
 	},
-
+	"frames": [
 	{
-		"ids": "$ igi_finder.get_smarts(1,1)",
-		"id": "$ wtf.shuffle(|this.ids|)[1] or false",
-		"link_id": "smart",
-		"to_description": true
+		"src": "GhenTuong/kill_squad.json",
+		"smart_id": "$ wtf.shuffle(igi_finder.get_smarts(1,1))[1]",
+		"section_name":"$ 'gt_stalker_heavy_' .. wtf_gt_tasks.scale_to_player() .. '_' .. |this.faction|",
+		"squad_size": 4,
+		"link_id": "frame",
+
+		"faction":"$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of actor and enemy of taskgiver')"
 	}
 	],
 	"icon": "ui_inGame2_PD_master_boevih_sistem",
+	"rewards": {
+		"money": "@$ 2000 + 400 * |frame.squad_size|",
+		"goodwill": "@$ 20 + 4 * |frame.squad_size|"
+	},
 	"quest_givers": [
 		{"Mechanic": true}
 	]
